@@ -150,6 +150,26 @@ def aliases(player_qids):
       }}""")
 
 
+def player_meta(player_qids):
+    values = " ".join(f"wd:{q}" for q in player_qids)
+    return sparql(f"""
+      SELECT ?player
+             (GROUP_CONCAT(DISTINCT ?countryLabel; separator=", ") AS ?nationalities)
+             (GROUP_CONCAT(DISTINCT ?posLabel;    separator=", ") AS ?positions)
+      WHERE {{
+        VALUES ?player {{ {values} }}
+        OPTIONAL {{
+          ?player wdt:P27 ?country .
+          ?country rdfs:label ?countryLabel . FILTER(LANG(?countryLabel)="en")
+        }}
+        OPTIONAL {{
+          ?player wdt:P413 ?pos .
+          ?pos rdfs:label ?posLabel . FILTER(LANG(?posLabel)="en")
+        }}
+      }}
+      GROUP BY ?player""")
+
+
 def classify_clubs(club_qids):
     values = " ".join(f"wd:{q}" for q in club_qids)
     return sparql(f"""
@@ -167,7 +187,8 @@ def init_db(conn):
       CREATE TABLE IF NOT EXISTS clubs (
         qid TEXT PRIMARY KEY, name TEXT, crest_url TEXT, crest_file TEXT,
         is_anchor INTEGER DEFAULT 0, is_club INTEGER DEFAULT 1);
-      CREATE TABLE IF NOT EXISTS players (qid TEXT PRIMARY KEY, display_name TEXT);
+      CREATE TABLE IF NOT EXISTS players (qid TEXT PRIMARY KEY, display_name TEXT,
+        nationality TEXT, position TEXT);
       CREATE TABLE IF NOT EXISTS player_aliases (
         player_qid TEXT, alias TEXT, UNIQUE(player_qid, alias));
       CREATE TABLE IF NOT EXISTS stints (
@@ -271,6 +292,30 @@ def build():
     conn.close()
 
 
+def enrich_players():
+    conn = sqlite3.connect(DB_PATH)
+    # Add columns if this is an older DB that predates them.
+    for col in ("nationality", "position"):
+        try:
+            conn.execute(f"ALTER TABLE players ADD COLUMN {col} TEXT")
+            conn.commit()
+        except Exception:
+            pass
+    players = [r[0] for r in conn.execute("SELECT qid FROM players").fetchall()]
+    total = len(players)
+    print(f"[enrich] fetching nationality + position for {total} players")
+    for i, batch in enumerate(chunked(players, PLAYER_BATCH), 1):
+        for r in player_meta(batch):
+            pq = qid(val(r, "player"))
+            conn.execute(
+                "UPDATE players SET nationality=?, position=? WHERE qid=?",
+                (val(r, "nationalities") or None, val(r, "positions") or None, pq))
+        conn.commit()
+        print(f"[enrich] batch {i}/{-(-total//PLAYER_BATCH)}"); time.sleep(SLEEP)
+    conn.close()
+    print("[enrich] done")
+
+
 def download_crests():
     os.makedirs(CREST_DIR, exist_ok=True)
     conn = sqlite3.connect(DB_PATH)
@@ -296,7 +341,10 @@ def download_crests():
 if __name__ == "__main__":
     ap = argparse.ArgumentParser()
     ap.add_argument("--crests", action="store_true", help="download crest images")
+    ap.add_argument("--enrich", action="store_true", help="add nationality + position to players")
     args = ap.parse_args()
     build()
     if args.crests:
         download_crests()
+    if args.enrich:
+        enrich_players()
