@@ -1,0 +1,15 @@
+# Generated dataset (regenerable by running the script — don't commit)
+football.db
+crests/
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+env/
+
+# OS / editor
+.DS_Store
+.idea/
+.vscode/
