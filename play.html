@@ -24,7 +24,8 @@
   .club .badge{ width:64px; height:64px; display:flex; align-items:center; justify-content:center;
                 background:var(--card); border:1px solid var(--line); border-radius:10px; overflow:hidden; }
   .club .badge img{ max-width:52px; max-height:52px; }
-  .club .nm{ font-size:12px; text-align:center; line-height:1.25; color:var(--ink); }
+  .club .badge img.hidden{ display:none; }
+  .club .nm{ font-size:12px; text-align:center; line-height:1.25; color:var(--ink); font-weight:600; }
   .club .yr{ font-size:10px; color:var(--soft); }
   .arrow{ color:var(--accent); font-size:18px; }
   .ask{ text-align:center; font-size:15px; color:var(--soft); margin:16px 0 8px; }
@@ -36,11 +37,14 @@
             border-radius:10px; box-shadow:0 12px 30px -12px rgba(0,0,0,.25); overflow:hidden; z-index:5; }
   .suggest div{ padding:11px 15px; font-size:15px; cursor:pointer; border-bottom:1px solid #f0eadd; }
   .suggest div:hover{ background:#f6efe2; }
-  .result{ text-align:center; font-size:17px; font-weight:700; min-height:26px; margin:18px 0 10px; }
+  .hint-area{ min-height:26px; text-align:center; font-size:14px; color:var(--soft);
+              margin:10px 0 4px; letter-spacing:.01em; }
+  .hint-area b{ color:var(--ink); }
+  .result{ text-align:center; font-size:17px; font-weight:700; min-height:26px; margin:10px 0 10px; }
   .result.good{ color:var(--good); }
   .result.bad{ color:var(--bad); }
   .answer{ text-align:center; color:var(--soft); font-size:14px; margin-bottom:14px; }
-  .row{ display:flex; gap:10px; justify-content:center; }
+  .row{ display:flex; gap:10px; justify-content:center; flex-wrap:wrap; }
   button{ font-size:14px; font-weight:700; padding:11px 20px; border-radius:999px; cursor:pointer;
           border:1px solid var(--line); background:#efe7d8; color:var(--ink); }
   button.primary{ background:var(--accent); border-color:var(--accent); color:var(--paper); }
@@ -61,9 +65,11 @@
       <input id="guess" autocomplete="off" placeholder="Start typing a name..." />
       <div class="suggest" id="suggest" style="display:none"></div>
     </div>
+    <div class="hint-area" id="hint-area"></div>
     <div class="result" id="result"></div>
     <div class="answer" id="answer"></div>
     <div class="row">
+      <button id="hint">Hint</button>
       <button id="reveal">Reveal</button>
       <button id="next" class="primary">Next &rarr;</button>
     </div>
@@ -100,28 +106,52 @@
   var elPath=document.getElementById('path'), elGuess=document.getElementById('guess'),
       elSug=document.getElementById('suggest'), elRes=document.getElementById('result'),
       elAns=document.getElementById('answer'), elScore=document.getElementById('score'),
-      elTotal=document.getElementById('total');
-  var answer=null, locked=false, score=0, total=0;
+      elTotal=document.getElementById('total'), elHintArea=document.getElementById('hint-area'),
+      elHintBtn=document.getElementById('hint');
+  var answer=null, locked=false, score=0, total=0, hintStep=0;
+
+  function buildCard(c, idx){
+    if(idx>0){ var a=document.createElement('div'); a.className='arrow'; a.textContent='\u2192'; elPath.appendChild(a); }
+    var d=document.createElement('div'); d.className='club';
+    // Badge \u2014 always rendered; crest shown when available, hidden on error
+    var badge=document.createElement('div'); badge.className='badge';
+    if(c.crest){
+      var img=document.createElement('img'); img.src=c.crest; img.alt=c.name;
+      img.onerror=function(){ this.style.display='none'; };
+      badge.appendChild(img);
+    }
+    d.appendChild(badge);
+    // Club name \u2014 ALWAYS shown as text
+    var nm=document.createElement('div'); nm.className='nm'; nm.textContent=c.name; d.appendChild(nm);
+    // Years \u2014 ALWAYS shown
+    var yr=document.createElement('div'); yr.className='yr';
+    yr.textContent=(c.start||'?')+(c.end?('\u2013'+c.end):''); d.appendChild(yr);
+    elPath.appendChild(d);
+  }
+
   function newQuestion(){
     answer = P[Math.floor(Math.random()*P.length)];
-    locked=false; elGuess.value=''; elGuess.disabled=false; elSug.style.display='none';
+    locked=false; hintStep=0;
+    elGuess.value=''; elGuess.disabled=false; elSug.style.display='none';
     elRes.textContent=''; elRes.className='result'; elAns.textContent='';
+    elHintArea.textContent=''; elHintBtn.disabled=false; elHintBtn.textContent='Hint';
     elPath.innerHTML='';
-    answer.clubs.forEach(function(c,idx){
-      if(idx>0){ var a=document.createElement('div'); a.className='arrow'; a.textContent='\u2192'; elPath.appendChild(a); }
-      var d=document.createElement('div'); d.className='club';
-      var badge=document.createElement('div'); badge.className='badge';
-      if(c.crest){ var img=document.createElement('img'); img.src=c.crest;
-        img.onerror=function(){ badge.innerHTML='<span class="nm">'+c.name+'</span>'; };
-        badge.appendChild(img); }
-      else { badge.innerHTML='<span class="nm">'+c.name+'</span>'; }
-      d.appendChild(badge);
-      var nm=document.createElement('div'); nm.className='nm'; nm.textContent=c.name; d.appendChild(nm);
-      var yr=document.createElement('div'); yr.className='yr';
-      yr.textContent=(c.start||'?')+(c.end?('\u2013'+c.end):''); d.appendChild(yr);
-      elPath.appendChild(d);
-    });
+    answer.clubs.forEach(buildCard);
     elGuess.focus();
+  }
+
+  function showHint(){
+    if(locked) return;
+    hintStep++;
+    if(hintStep===1){
+      var nat=answer.nationality||'Unknown';
+      elHintArea.innerHTML='Nationality: <b>'+nat+'</b>';
+      elHintBtn.textContent='More';
+    } else {
+      var nat=answer.nationality||'Unknown', pos=answer.position||'Unknown';
+      elHintArea.innerHTML='Nationality: <b>'+nat+'</b> &nbsp;&middot;&nbsp; Position: <b>'+pos+'</b>';
+      elHintBtn.disabled=true;
+    }
   }
   elGuess.addEventListener('input', function(){
     if(locked) return;
@@ -160,6 +190,7 @@
   });
   function submit(picked){
     if(locked) return; locked=true; elSug.style.display='none'; elGuess.disabled=true;
+    elHintBtn.disabled=true;
     total++; elTotal.textContent=total;
     if(picked._i===answer._i){ score++; elScore.textContent=score;
       elRes.textContent='\u2713 Correct \u2014 '+answer.name; elRes.className='result good'; }
@@ -168,11 +199,13 @@
   }
   function reveal(){
     if(locked) return; locked=true; elSug.style.display='none'; elGuess.disabled=true;
+    elHintBtn.disabled=true;
     total++; elTotal.textContent=total;
     elRes.textContent='It was '+answer.name; elRes.className='result bad';
   }
   document.getElementById('next').onclick=newQuestion;
   document.getElementById('reveal').onclick=reveal;
+  elHintBtn.onclick=showHint;
   newQuestion();
 })();
 </script>

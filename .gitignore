@@ -1,6 +1,7 @@
 # Generated dataset (regenerable by running the script — don't commit)
 football.db
 crests/
+players.js
 
 # API credentials — never commit
 config.py
