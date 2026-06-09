@@ -1,0 +1,180 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Guess the Player — Data Check</title>
+<style>
+  :root{ --paper:#f3ede1; --ink:#211c17; --soft:#5c534a; --line:#d8cdba;
+         --accent:#bd4a26; --good:#2e7d4f; --bad:#bd4a26; --card:#fbf7ee; }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{ background:var(--paper); color:var(--ink); min-height:100vh;
+        font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;
+        display:flex; flex-direction:column; align-items:center; padding:28px 16px; }
+  .wrap{ width:100%; max-width:760px; }
+  .top{ display:flex; justify-content:space-between; align-items:baseline; margin-bottom:6px; }
+  h1{ font-size:20px; font-weight:700; }
+  .score{ font-size:14px; color:var(--soft); }
+  .score b{ color:var(--accent); }
+  .hint{ font-size:13px; color:var(--soft); margin-bottom:22px; }
+  .path{ display:flex; flex-wrap:wrap; align-items:center; gap:10px; justify-content:center;
+         background:#efe7d8; border:1px solid var(--line); border-radius:12px;
+         padding:22px 16px; min-height:140px; margin-bottom:8px; }
+  .club{ display:flex; flex-direction:column; align-items:center; gap:6px; width:104px; }
+  .club .badge{ width:64px; height:64px; display:flex; align-items:center; justify-content:center;
+                background:var(--card); border:1px solid var(--line); border-radius:10px; overflow:hidden; }
+  .club .badge img{ max-width:52px; max-height:52px; }
+  .club .nm{ font-size:12px; text-align:center; line-height:1.25; color:var(--ink); }
+  .club .yr{ font-size:10px; color:var(--soft); }
+  .arrow{ color:var(--accent); font-size:18px; }
+  .ask{ text-align:center; font-size:15px; color:var(--soft); margin:16px 0 8px; }
+  .box{ position:relative; }
+  input{ width:100%; padding:13px 15px; font-size:16px; border:1px solid var(--line);
+         border-radius:10px; background:#fff; color:var(--ink); }
+  input:focus{ outline:none; border-color:var(--accent); }
+  .suggest{ position:absolute; left:0; right:0; top:52px; background:#fff; border:1px solid var(--line);
+            border-radius:10px; box-shadow:0 12px 30px -12px rgba(0,0,0,.25); overflow:hidden; z-index:5; }
+  .suggest div{ padding:11px 15px; font-size:15px; cursor:pointer; border-bottom:1px solid #f0eadd; }
+  .suggest div:hover{ background:#f6efe2; }
+  .result{ text-align:center; font-size:17px; font-weight:700; min-height:26px; margin:18px 0 10px; }
+  .result.good{ color:var(--good); }
+  .result.bad{ color:var(--bad); }
+  .answer{ text-align:center; color:var(--soft); font-size:14px; margin-bottom:14px; }
+  .row{ display:flex; gap:10px; justify-content:center; }
+  button{ font-size:14px; font-weight:700; padding:11px 20px; border-radius:999px; cursor:pointer;
+          border:1px solid var(--line); background:#efe7d8; color:var(--ink); }
+  button.primary{ background:var(--accent); border-color:var(--accent); color:var(--paper); }
+  button:disabled{ opacity:.4; cursor:default; }
+  .setup{ background:#fff; border:1px solid var(--line); border-radius:12px; padding:22px; line-height:1.6; }
+  code{ background:#efe7d8; padding:2px 6px; border-radius:4px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="top"><h1>Guess the Player</h1>
+    <div class="score">Score <b id="score">0</b> / <span id="total">0</span></div></div>
+  <div class="hint">Type the player's name, then pick a suggestion to answer. Crests show where available; otherwise the club name is shown.</div>
+  <div id="game" style="display:none">
+    <div class="path" id="path"></div>
+    <div class="ask">Who is this player?</div>
+    <div class="box">
+      <input id="guess" autocomplete="off" placeholder="Start typing a name..." />
+      <div class="suggest" id="suggest" style="display:none"></div>
+    </div>
+    <div class="result" id="result"></div>
+    <div class="answer" id="answer"></div>
+    <div class="row">
+      <button id="reveal">Reveal</button>
+      <button id="next" class="primary">Next &rarr;</button>
+    </div>
+  </div>
+  <div id="setup" class="setup" style="display:none">
+    <b>No data loaded.</b><br>
+    1. Put <code>play.html</code>, <code>players.js</code>, and your <code>crests/</code> folder in the same folder.<br>
+    2. If you haven't yet, run <code>python export_game_data.py</code> to create <code>players.js</code>.<br>
+    3. In that folder run <code>python3 -m http.server 8000</code>, then open
+       <code>http://localhost:8000/play.html</code> in your browser.
+  </div>
+</div>
+<script src="players.js" onerror="window.__noData=true"></script>
+<script>
+(function(){
+  var P = window.GAME_PLAYERS;
+  if(!P || !P.length){ document.getElementById('setup').style.display='block'; return; }
+  document.getElementById('game').style.display='block';
+  var norm = function(s){ return (s||'').toLowerCase()
+        .normalize('NFD').replace(/[\u0300-\u036f]/g,'').replace(/[^a-z0-9 ]/g,' ').trim(); };
+  function levenshtein(a,b){
+    var m=a.length,n=b.length,d=[],i,j;
+    for(i=0;i<=m;i++){d[i]=[i];}
+    for(j=1;j<=n;j++){d[0][j]=j;}
+    for(i=1;i<=m;i++) for(j=1;j<=n;j++)
+      d[i][j]=a[i-1]===b[j-1]?d[i-1][j-1]:1+Math.min(d[i-1][j],d[i][j-1],d[i-1][j-1]);
+    return d[m][n];
+  }
+  P.forEach(function(p,i){
+    p._i=i;
+    p._search=[norm(p.name)].concat((p.aliases||[]).map(norm));
+    p._words=p._search.map(function(s){return s.split(' ').filter(function(w){return w.length>1;});});
+  });
+  var elPath=document.getElementById('path'), elGuess=document.getElementById('guess'),
+      elSug=document.getElementById('suggest'), elRes=document.getElementById('result'),
+      elAns=document.getElementById('answer'), elScore=document.getElementById('score'),
+      elTotal=document.getElementById('total');
+  var answer=null, locked=false, score=0, total=0;
+  function newQuestion(){
+    answer = P[Math.floor(Math.random()*P.length)];
+    locked=false; elGuess.value=''; elGuess.disabled=false; elSug.style.display='none';
+    elRes.textContent=''; elRes.className='result'; elAns.textContent='';
+    elPath.innerHTML='';
+    answer.clubs.forEach(function(c,idx){
+      if(idx>0){ var a=document.createElement('div'); a.className='arrow'; a.textContent='\u2192'; elPath.appendChild(a); }
+      var d=document.createElement('div'); d.className='club';
+      var badge=document.createElement('div'); badge.className='badge';
+      if(c.crest){ var img=document.createElement('img'); img.src=c.crest;
+        img.onerror=function(){ badge.innerHTML='<span class="nm">'+c.name+'</span>'; };
+        badge.appendChild(img); }
+      else { badge.innerHTML='<span class="nm">'+c.name+'</span>'; }
+      d.appendChild(badge);
+      var nm=document.createElement('div'); nm.className='nm'; nm.textContent=c.name; d.appendChild(nm);
+      var yr=document.createElement('div'); yr.className='yr';
+      yr.textContent=(c.start||'?')+(c.end?('\u2013'+c.end):''); d.appendChild(yr);
+      elPath.appendChild(d);
+    });
+    elGuess.focus();
+  }
+  elGuess.addEventListener('input', function(){
+    if(locked) return;
+    var q=norm(elGuess.value);
+    if(q.length<2){ elSug.style.display='none'; return; }
+    // tier 0 = substring match, tier 1 = edit-distance match
+    var maxDist=Math.min(3,Math.ceil(q.length/2));
+    var tier0=[], tier1=[];
+    for(var i=0;i<P.length;i++){
+      var p=P[i], subPos=-1;
+      // substring check
+      for(var j=0;j<p._search.length;j++){
+        var pos=p._search[j].indexOf(q);
+        if(pos>-1&&(subPos<0||pos<subPos)) subPos=pos;
+      }
+      if(subPos>-1){ tier0.push({p:p,rank:subPos}); continue; }
+      // edit-distance check against each word
+      var bestDist=Infinity;
+      for(var j=0;j<p._words.length;j++){
+        var ws=p._words[j];
+        for(var k=0;k<ws.length;k++){
+          var d=levenshtein(q,ws[k]);
+          if(d<bestDist) bestDist=d;
+        }
+      }
+      if(bestDist<=maxDist) tier1.push({p:p,rank:bestDist});
+    }
+    tier0.sort(function(a,b){return a.rank-b.rank;});
+    tier1.sort(function(a,b){return a.rank-b.rank;});
+    var hits=tier0.concat(tier1).slice(0,8);
+    if(!hits.length){ elSug.style.display='none'; return; }
+    elSug.innerHTML='';
+    hits.forEach(function(h){ var d=document.createElement('div'); d.textContent=h.p.name;
+      d.onclick=function(){ submit(h.p); }; elSug.appendChild(d); });
+    elSug.style.display='block';
+  });
+  function submit(picked){
+    if(locked) return; locked=true; elSug.style.display='none'; elGuess.disabled=true;
+    total++; elTotal.textContent=total;
+    if(picked._i===answer._i){ score++; elScore.textContent=score;
+      elRes.textContent='\u2713 Correct \u2014 '+answer.name; elRes.className='result good'; }
+    else { elRes.textContent='\u2717 Wrong'; elRes.className='result bad';
+      elAns.textContent='You picked '+picked.name+'. It was '+answer.name+'.'; }
+  }
+  function reveal(){
+    if(locked) return; locked=true; elSug.style.display='none'; elGuess.disabled=true;
+    total++; elTotal.textContent=total;
+    elRes.textContent='It was '+answer.name; elRes.className='result bad';
+  }
+  document.getElementById('next').onclick=newQuestion;
+  document.getElementById('reveal').onclick=reveal;
+  newQuestion();
+})();
+</script>
+</body>
+</html>
