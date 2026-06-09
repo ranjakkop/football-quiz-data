@@ -2,6 +2,9 @@
 football.db
 crests/
 
+# API credentials — never commit
+config.py
+
 # Python
 __pycache__/
 *.pyc
