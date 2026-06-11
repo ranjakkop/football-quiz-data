@@ -27,6 +27,8 @@
   .club .badge img.hidden{ display:none; }
   .club .nm{ font-size:12px; text-align:center; line-height:1.25; color:var(--ink); font-weight:600; }
   .club .yr{ font-size:10px; color:var(--soft); }
+  .club .loan-tag{ font-size:9px; font-weight:700; letter-spacing:.06em; color:#fff;
+                   background:var(--accent); border-radius:4px; padding:1px 5px; }
   .arrow{ color:var(--accent); font-size:18px; }
   .ask{ text-align:center; font-size:15px; color:var(--soft); margin:16px 0 8px; }
   .box{ position:relative; }
@@ -57,7 +59,7 @@
 <div class="wrap">
   <div class="top"><h1>Guess the Player</h1>
     <div class="score">Score <b id="score">0</b> / <span id="total">0</span></div></div>
-  <div class="hint">Type the player's name, then pick a suggestion to answer. Crests show where available; otherwise the club name is shown.</div>
+  <div class="hint">Type the player's name, then pick a suggestion to answer. Crests show where available; otherwise the club name is shown. <b>LOAN</b> marks loan spells; the parent club reappears after a loan when the player returned and played.</div>
   <div id="game" style="display:none">
     <div class="path" id="path"></div>
     <div class="ask">Who is this player?</div>
@@ -126,6 +128,8 @@
     // Years \u2014 ALWAYS shown
     var yr=document.createElement('div'); yr.className='yr';
     yr.textContent=(c.start||'?')+(c.end?('\u2013'+c.end):''); d.appendChild(yr);
+    // Loan spells carry an L tag so they read differently from transfers
+    if(c.loan){ var lt=document.createElement('div'); lt.className='loan-tag'; lt.textContent='LOAN'; d.appendChild(lt); }
     elPath.appendChild(d);
   }
 
