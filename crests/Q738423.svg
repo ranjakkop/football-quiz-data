@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="74.046455mm"
+   height="94.720833mm"
+   viewBox="0 0 279.86062 358"
+   version="1.1"
+   id="svg63609"
+   inkscape:version="1.0.1 (3bc2e813f5, 2020-09-07)"
+   sodipodi:docname="Gamba Osaka logo.svg">
+  <defs
+     id="defs63603" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.35"
+     inkscape:cx="234.9303"
+     inkscape:cy="190.42857"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     inkscape:document-rotation="0"
+     showgrid="false"
+     inkscape:window-width="1267"
+     inkscape:window-height="728"
+     inkscape:window-x="83"
+     inkscape:window-y="0"
+     inkscape:window-maximized="0" />
+  <metadata
+     id="metadata63606">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-140.0697,-329.57143)">
+    <path
+       class="cls-1"
+       d="m 140.0697,329.57143 v 200.61781 c 0,70.39301 47.15386,124.36999 136.32734,156.09863 l 3.60297,1.28356 3.60296,-1.28356 C 372.77646,654.55923 419.93031,600.58225 419.93031,530.18924 V 329.57143 Z"
+       id="path63581"
+       style="fill:#ffffff;stroke-width:2.25186" />
+    <path
+       class="cls-2"
+       d="m 280.00001,510.57558 v 43.64096 l 71.74411,-24.0273 c 0,22.51856 -8.6246,40.5334 -27.17989,56.94943 a 171.79406,171.79406 0 0 1 -44.56422,27.26997 171.79406,171.79406 0 0 1 -44.56423,-27.31501 c -18.48773,-16.32595 -27.17989,-34.43087 -27.17989,-56.90439 v -50.50912 a 9.5703862,9.5703862 0 0 0 -6.53038,-9.00742 l -50.89194,-17.02403 v 76.56309 c 0,89.08341 81.20191,128.89622 129.16644,145.96528 47.96452,-17.06906 129.16642,-56.88187 129.16642,-145.96528 v -76.56309 l -116.10566,38.77696 a 19.163291,19.163291 0 0 0 -13.06076,18.14995 z"
+       id="path63583"
+       style="fill:#054582;stroke-width:2.25186" />
+    <path
+       class="cls-3"
+       d="m 208.25589,397.7351 h 143.48823 v 52.28808 l 50.89194,-17.02402 a 9.5703862,9.5703862 0 0 0 6.53037,-9.00743 V 340.3353 H 150.83357 v 83.67895 a 9.5478677,9.5478677 0 0 0 6.55289,9.00743 l 50.86943,17.0015 z"
+       id="path63585"
+       style="fill:#161412;stroke-width:2.25186" />
+  </g>
+</svg>

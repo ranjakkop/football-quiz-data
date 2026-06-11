@@ -1,68 +1,611 @@
 qid,name,reason
-Q16344,A.C. Perugia Calcio,no confident match among: Perugia (Italy)
-Q289707,A.C. Reggiana 1919,no confident match among: Reggiana (Italy)
-Q1886341,A.S.D. Casertana Calcio,no results
-Q8476,AS Reggina 1914,no confident match among: Reggina (Italy)
-Q429630,Al Jazira Club,no results
-Q283545,Al Sadd Sports Club,no results
-Q2636005,Al-Shabab Football Club,no results
-Q576285,Albacete Balompié,no results
-Q338285,América Futebol Clube,no confident match among: América de Natal (Brazil); América de Propriá (Brazil); América Mineiro Women (Brazil)
+Q16525407,1. FC Kaiserslautern II,no confident match among: Kaiserslautern II (Germany); Kaiserslautern (Germany)
+Q16525419,1. FSV Mainz 05 II,no confident match among: Mainz (Germany); Mainz II (Germany)
+Q2176062,A.C. Bellaria Igea Marina,no results
+Q3625800,A.C. Cantù G.S. San Paolo,no results
+Q610621,A.C. Carpi,ambiguous: Carpi (Italy); Carpi FC (Italy)
+Q3626071,A.C. Meda 1913,no confident match among: Al-Ahli Wad Madani (Sudan)
+Q3305152,A.C. Palazzolo 1913,no confident match among: Pro Palazzolo (Italy)
+Q581713,A.C. Rodengo Saiano,no results
+Q3470711,A.C. Sambonifacese,no results
+Q4647113,A.D. Voluntas Calcio Spoleto,no results
+Q296050,A.O. Kavalas (association football),no results
+Q3626798,A.S. Fasano,no confident match among: Città di Fasano (Italy)
+Q3626885,A.S. Lodigiani,no confident match among: Atletico Lodigiani (Italy)
+Q3391273,A.S. Ostia Mare 1945,no confident match among: Marek Dupnitsa (Bulgaria); Ostiamare (Italy); Som Maresme (Spain); Minaur Baia Mare (Romania)
+Q298392,A.S. Pescina Valle del Giovenco,no results
+Q2755428,A.S. Pizzighettone,no results
+Q2891756,A.S.D. Battipagliese,no confident match among: ASD Grassina (Italy); ASD Savignanese (Italy); ASD Villafranca (Italy); ASD Troina Calcio (Italy)
+Q16836858,A.S.D. Boca Ascesa Val Liona,no results
+Q2456343,A.S.D. Calcio Ivrea,no confident match among: ASD Grassina (Italy); ASD Savignanese (Italy); ASD Villafranca (Italy); ASD Troina Calcio (Italy)
+Q297431,A.S.D. Castel di Sangro Calcio,no results
+Q3893297,A.S.D. Casteldebole Panigal 1919,no results
+Q1451177,A.S.D. Centese 1913,no confident match among: ASD Grassina (Italy); ASD Savignanese (Italy); ASD Villafranca (Italy); ASD Troina Calcio (Italy)
+Q3678801,A.S.D. Civitavecchia 1920,no confident match among: ASD Grassina (Italy); ASD Savignanese (Italy); ASD Villafranca (Italy); ASD Troina Calcio (Italy)
+Q2818907,A.S.D. Elpidiense Cascinare,no results
+Q1130870,A.S.D. Mestrina 1929,no confident match among: ASD Grassina (Italy); ASD Savignanese (Italy); ASD Villafranca (Italy); ASD Troina Calcio (Italy)
+Q4005153,A.S.D. Nerostellati Frattese,no results
+Q384592,A.S.D. Ponziana,no confident match among: ASD Grassina (Italy); ASD Savignanese (Italy); ASD Villafranca (Italy); ASD Troina Calcio (Italy)
+Q3867441,A.S.D. Real S.M. Hyria Nola 2012,no results
+Q747976,A.S.D. Riccione 1929,no confident match among: United Riccione (Italy)
+Q289696,A.S.D. SanGiovanniValdarno,no confident match among: ASD Grassina (Italy); ASD Savignanese (Italy); ASD Villafranca (Italy); ASD Troina Calcio (Italy)
+Q3626916,A.S.D. Stuoie Baracca Lugo,no results
+Q3626919,A.S.D. Sulmona Calcio,no confident match among: ASD Grassina (Italy); ASD Savignanese (Italy); ASD Villafranca (Italy); ASD Troina Calcio (Italy)
+Q3758194,A.S.D. Union ArzignanoChiampo,no results
+Q16960063,A.S.D. Vittorio Falmec San Martino Colle,no results
+Q3660099,A.S.D.C. Verbania,no confident match among: S.S. Verbania Calcio (Italy)
+Q240783,AC Omonia,no confident match among: Omonia 29M (Cyprus); Omonia Psevda (Cyprus); Omonia Nicosia (Cyprus); Omonia Aradippou (Cyprus)
+Q2819082,AC Semassi F.C.,no results
+Q131378,APOEL F.C.,no confident match among: APOEL Nicosia (Cyprus)
+Q3626842,ASD Angelana 1930,no confident match among: ASD Grassina (Italy); ASD Savignanese (Italy); ASD Villafranca (Italy); ASD Troina Calcio (Italy)
+Q732251,ASD Derthona FBC 1908,no results
+Q3747548,ASD FBC Saronno 1910,no results
+Q1082273,ASD Soccer Trani,no results
+Q267574,Aalborg Boldspilklub,no confident match among: Vejgaard (Denmark)
+Q214992,Aalesunds FK,no confident match among: Aalesunds Women (Norway); Aalesund (Norway)
+Q301431,Aarhus Gymnastikforening,no confident match among: Odder (Denmark); Herlufsholm (Denmark)
+Q2488516,Abercorn F.C.,no results
+Q105942616,Acero Club de Olabeaga,no results
+Q4681178,Addington F.C.,no results
+Q287851,Akademisk Boldklub,no confident match among: FB (Denmark); ØB (Denmark); BBB (Denmark); Gug (Denmark)
+Q812720,Al Ain FC,ambiguous: Al Ain (United Arab Emirates); Al-Ain (Saudi Arabia)
+Q60318566,Al Bidaa SC,no confident match among: Alba (Italy); Alfa (Belarus); Alta (Norway); Altay (Turkey)
+Q283760,Al-Arabi SC,ambiguous: Al-Arabi (Qatar); Al-Arabi SC (Kuwait)
+Q20081435,Al-Feiha FC,no confident match among: Alba (Italy); Alfa (Belarus); Alta (Norway); Altay (Turkey)
+Q4708966,Albacete Balompié B,no confident match among: Ba (Fiji); BAK (Turkey); BBB (Denmark); Be1 (Lithuania)
+Q2798024,Albert Rovers F.C.,no confident match among: Rovers (United States Virgin Islands); Rovers (Guam); TSS Rovers (Canada); Raith Rovers (Scotland)
+Q2300305,Aldershot F.C.,no confident match among: Aldershot Town (England)
+Q527487,Alicante CF,no confident match among: Hércules (Spain); Hércules B (Spain)
+Q10750304,Alicante CF B,no confident match among: Ba (Fiji); BAK (Turkey); BBB (Denmark); Be1 (Lithuania)
+Q866884,Amiens SC,ambiguous: Amiens (France); Amiens AC (France)
+Q697509,Amurrio Club,no results
+Q4754611,Andover F.C.,no confident match among: Andover New Street (England)
 Q1967477,Antiguoko,no results
-Q16539606,Arta/Solar7,no results
-Q6630,Ascoli Calcio 1898 FC,no results
-Q780539,Atlético Madrid B,no confident match among: Atlético Madrid (Spain); Atlético Madrid C (Spain); Atlético Madrileño (Spain); Atlético Madrid Juvenil (Spain)
-Q652516,Benevento Calcio,no confident match among: Benevento (Italy)
-Q956520,Bermeo FT,no results
-Q219703,Boavista F.C.,ambiguous: Boavista (Portugal); Boavista SC (Brazil)
-Q6651,Brescia Calcio,no confident match among: Brescia Calcio Femminile (Italy); Brescia (Italy)
-Q211906,Brøndby IF,no confident match among: BSI (Denmark); Brøndby (Denmark); Brøndby Women (Denmark)
+Q4785164,Arcadia Shepherds F.C.,no results
+Q130577307,Arenas de Alcabre SCD,no results
+Q12110,Arenys de Mar,no confident match among: Marke (Belgium); Marko (Greece); Marsa (Malta); Maricá (Brazil)
+Q31188250,Arratia Kirol Elkartea,no confident match among: Añorga (Spain); Pasaia (Spain); Beasain (Spain); Touring (Spain)
+Q4384231,Arsenal F.C. Under-21s and Academy,no results
+Q2978638,Arthurlie F.C.,no results
+Q3625739,Associazione Calcio Audace,no confident match among: Audace Cerignola (Italy); Reggiana (Italy)
+Q3625866,Associazione Calcio Codogno 1908,no results
+Q2868210,Associazione Calcio Crevalcore,no results
+Q3625977,Associazione Calcio Fucecchio,no results
+Q3626069,Associazione Calcio Massiminiana,no results
+Q2311455,Associazione Calcio Sampierdarenese,no results
+Q3626520,Associazione Calcistica Dilettantistica Rapallo Ruentes 1914,no results
+Q1833715,Associazione Milanese del Calcio,no confident match among: Delfín (Ecuador); Delémont (Switzerland); Delhi FC (India); Delaware FC (United States)
+Q3626838,Associazione Sportiva Città di Bagheria,no confident match among: Città di Gela (Italy); Città di Casale (Italy); Città di Fasano (Italy); Città di Castello (Italy)
+Q3626841,Associazione Sportiva Dilettantistica Abbiategrasso,no confident match among: Budoni (Italy); Chieri (Italy); Chieti (Italy); Chions (Italy)
+Q3626886,Associazione Sportiva Dilettantistica Liberty Bari 1909,no results
+Q3626923,Associazione Sportiva Dilettantistica Ventimiglia Calcio,no confident match among: Budoni (Italy); Chieri (Italy); Chieti (Italy); Chions (Italy)
+Q3627010,Associazione Sportiva Portuense,no results
+Q3627222,Associazione Sportiva Urbino,no results
+Q3625740,Asti Calcio Football Club S.r.l.,no results
+Q1023522,Asturias F.C.,no results
+Q275626,Athlitiki Enosi Larissa F.C.,no confident match among: AEL (Greece)
+Q433529,Atletico Roma F.C.,no confident match among: Roma (Italy); Romania (Romania); Roma City (Italy); Roma Women (Italy)
+Q757425,Atlético Celaya,no confident match among: Celaya (Mexico)
+Q780539,Atlético Madrid B,no confident match among: Madrid CFF (Spain); Real Madrid (Spain); Racing Madrid (Spain); Real Madrid C (Spain)
+Q2869516,Atlético Rio Negro Clube,no confident match among: Río Negro (Uruguay); Rio Negro-RR (Brazil)
+Q767498,Augustinians FC,no results
+Q4831626,Ayr F.C.,no confident match among: Ayr United (Scotland)
+Q4831631,Ayr Parkhouse F.C.,no confident match among: Ayr United (Scotland)
+Q795709,BC Aichach,no soccer results
+Q464085,BSV 07 Schwenningen,no soccer results
+Q3195941,Baghdad FC,no confident match among: Amanat Baghdad (Iraq)
+Q4850803,Balgownie Rangers FC,no confident match among: Rangers (Scotland); Rangers B (Scotland); Rangers U20 (Scotland); Rangers Women (Scotland)
+Q4859851,Barcelona Esporte Clube,no confident match among: Barcelona (Spain); Barcelona SC (Ecuador); Barcelona-RO (Brazil); Barcelona Youth (Spain)
+Q809114,Barry Town F.C.,no confident match among: Township Rollers (Botswana); Tavua (Fiji); Lye Town (England); Bala Town (Wales)
+Q2310167,Bathgate F.C.,no results
+Q16536906,Bayer 04 Leverkusen II,no confident match among: Bayer Leverkusen (Germany); Bayer Leverkusen Women (Germany); Bayer Leverkusen Youth (Germany)
+Q4879300,Bedlington Terriers F.C.,no soccer results
+Q4879309,Bedminster F.C.,no results
+Q646079,Beerschot A.C.,ambiguous: Beerschot (Belgium); Beerschot AC (Belgium)
+Q573637,Beijing Sport University F.C.,no confident match among: University Azzurri (Australia); University of Tsukuba (Japan); University of Stirling (Scotland); University of Queensland FC (Australia)
+Q956520,Bermeo FT,no soccer results
+Q24264243,Bhayangkara F.C.,no confident match among: Bhayangkara Presisi Lampung (Indonesia)
+Q2662902,Bishop's Stortford F.C.,no confident match among: Bishops Stortford (England)
+Q16836839,Blackhall Colliery Welfare F.C.,no results
+Q4925235,Blantyre Victoria F.C.,no confident match among: Victoria Traian (Romania); Victoria Hamburg (Germany); Victoria Rosport (Luxembourg); Victoria Chișinău (Moldova)
+Q212708,Bohemian F.C.,no confident match among: Bohemians (Ireland); Bohemians 1905 (Czechia); Bohemians 1905 B (Czechia)
+Q797322,Boldklubben 1903,no confident match among: B.93 (Denmark); B 1960 (Denmark); Oksbøl (Denmark); Skjold (Denmark)
+Q16823761,Bolsover Colliery F.C.,no confident match among: Sherwood Colliery (England); Easington Colliery (England)
+Q123344580,Bong Range United,no results
+Q4943968,Bootle Athletic F.C.,no confident match among: Athletic 220 (Mongolia); Athletic Bilbao (Spain); Athletic Newham (England); Athletic Club-MG (Brazil)
+Q1917556,Bootle F.C.,ambiguous: Bootle (England); Bootle FC (England)
+Q187502,Boston Beacons,no confident match among: Beaconsfield Town (England)
+Q4947789,Boston Bulldogs,no soccer results
+Q3643019,Boston Soccer Club,no confident match among: CISA (United States); Navua (Fiji); Rovers (United States Virgin Islands); Vaipuna (Samoa)
+Q2583235,Bromsgrove Rovers F.C.,no confident match among: Rovers (United States Virgin Islands); Rovers (Guam); TSS Rovers (Canada); Raith Rovers (Scotland)
+Q1925823,Broxburn United F.C.,no confident match among: United City (Philippines); United Aruba (Aruba); United Nordic (Sweden); United Victory (Maldives)
+Q4996746,Bulleen Lions,no confident match among: Lionsbridge FC (United States); Lions Gibraltar (Gibraltar); BCH Lions (Mongolia)
+Q18503839,Bulli,no results
+Q4997141,Bulova SA,no confident match among: Såby (Denmark); Safa (Lebanon); SAPA (Finland); Sabah (Malaysia)
+Q852121,Burjassot CF,no results
+Q17512929,Bush Hill Rangers F.C.,no results
+Q503321,C.D. Guadalajara,ambiguous: Guadalajara (Spain); CD Guadalajara (Mexico)
+Q216459,C.D. Nacional,no confident match among: Nacional-AM (Brazil); Nacional Sucre (Bolivia); Nacional Potosí (Bolivia); Nacional de Patos (Brazil)
+Q216503,C.S. Marítimo,no confident match among: Marítimo (Portugal); Marítimo Feminino (Portugal); Marítimo de La Guaira (Venezuela); Estudiantes Aruba (Aruba)
+Q5006215,C.S. Marítimo B,no confident match among: Marítimo (Portugal); Estudiantes Aruba (Aruba); Marítimo Feminino (Portugal); Deportivo Marítimo (Spain)
+Q15407842,CD Ariznabarra,no results
+Q112841087,CD Badia,no results
 Q727093,CD Baskonia,no soccer results
+Q5010045,CD Betis San Isidro-Progreso,no results
+Q2191759,CD Ciempozuelos,no results
+Q5010072,CD Egüés,no confident match among: Valle de Egüés (Spain)
+Q540047,CD Elgoibar,no results
+Q756934,CD Ensidesa,no results
+Q114352715,CD Injerto,no results
+Q2638313,CD La Muela,no results
+Q513225,CD Laudio,no results
 Q657865,CD Logroñés,ambiguous: SD Logroñés (Spain); UD Logroñés (Spain)
-Q5014111,CR Vasco da Gama,no confident match among: Vasco da Gama (Brazil); Vasco da Gama-AC (Brazil); Vasco da Gama Vidigueira (Portugal)
-Q139399,Calcio Foggia 1920,no results
-Q8428,Calcio Padova,no confident match among: Padova (Italy)
-Q980573,Club Atlético River Plate,no confident match among: River Plate U20 (Argentina); River Plate Montevideo (Uruguay)
-Q12158,Club Deportivo Numancia de Soria,no confident match among: Numancia B (Spain)
-Q207373,Club Social y Deportivo Colo Colo,no results
-Q17479,Clube de Regatas do Flamengo,no confident match among: Flamengo (Brazil); Flamengo U20 (Brazil)
-Q460448,Cádiz Club de Fútbol,no confident match among: Cádiz (Spain); Cádiz Mirandilla (Spain)
-Q24886174,Danok Bat CF,no results
-Q2710,Delfino Pescara 1936,no confident match among: Pescara (Italy)
-Q274465,E.C. Vitória,no confident match among: Vitória (Brazil); CD Vitoria (Spain); Vitória-ES (Brazil); Porto Vitória (Brazil)
-Q910453,Esporte Clube Juventude,no confident match among: Juventude (Brazil); Juventude Women (Brazil)
-Q2346842,FC Barcelona C,no confident match among: Barcelona (Spain); Espanyol B (Spain); Barcelona SC (Ecuador); Barcelona-RO (Brazil)
-Q19512,FC Sochaux-Montbéliard,no confident match among: Sochaux (France); Sochaux II (France)
-Q188656,FK Partizan,no confident match among: Partizani B (Albania); Partizani Tirana (Albania); Partizan Belgrade (Serbia); Partizani Tirana Women (Albania)
-Q6601875,Fenerbahçe Istanbul,no results
-Q134241,Feyenoord Rotterdam,no confident match among: Feyenoord (The Netherlands)
-Q933676,Gernika Club,no results
-Q257984,Gimnàstic de Tarragona,no confident match among: Gimnàstic (Spain)
-Q11963,Hércules CF,ambiguous: Hércules (Spain); CD Hércules (El Salvador)
-Q459794,Piacenza Calcio,no results
-Q5409057,Q5409057,no results
-Q19597,Rangers F.C.,ambiguous: Rangers (Scotland); AC Rangers (DR Congo)
-Q2698432,Real Betis B,no confident match among: Real Betis (Spain); Real Betis Juvenil (Spain)
-Q732002,Royal Antwerp F.C.,no confident match among: Antwerp (Belgium)
-Q19585,Royal Charleroi S.C.,no confident match among: Zébra Élites (Belgium); Olympic Charleroi (Belgium)
-Q1349814,S.C. Ravenna Sport,no results
-Q131499,S.L. Benfica,ambiguous: Benfica (Portugal); CF Benfica (Portugal)
-Q297430,S.S. Arezzo,no confident match among: Arezzo (Italy); Arezzo Women (Italy)
-Q219233,SBV Vitesse,no confident match among: Vitesse (The Netherlands)
-Q208399,SC Bastia,ambiguous: Bastia (France); CA Bastia (France)
-Q1065084,SCD Durango,no results
+Q5010099,CD Margaritense,no results
+Q1965174,CD Masnou,no results
+Q25473624,CD Mungia,no results
+Q3781538,CD Onda,no results
+Q431971,CD Oro,no confident match among: Oroszlányi SZE (Hungary); Atalanta (Italy); Al Urooba (United Arab Emirates); Al-Orobah (Saudi Arabia)
+Q856137,CD Ourense,ambiguous: Ourense CF (Spain); CD Ourense (Spain); UD Ourense (Spain)
+Q856148,CD Puertollano,no confident match among: Calvo Sotelo Puertollano (Spain)
+Q5010127,CD River Ega,no confident match among: Egaleo (Greece)
+Q856140,CD San Fernando,ambiguous: San Fernando CD (Spain); UD San Fernando (Spain)
+Q5010136,CD Sondika,no results
+Q8347095,CD Vasconia de Donostia,no results
+Q856211,CE Júpiter,no confident match among: Júpiter Leonés (Spain)
+Q3160759,CE Mataró,no soccer results
+Q586629,CE Premià,no soccer results
+Q20103365,CE Sallent,no confident match among: Ceará (Brazil); Celje (Slovenia); CERFA (France); Cerro (Uruguay)
+Q732742,CF Extremadura,ambiguous: Extremadura (Spain); CD Extremadura (Spain)
+Q2633360,CF Gandía,no soccer results
+Q2506877,CF Gavà,no results
+Q2932033,CS Meaux,no confident match among: CSA (Brazil); CSE (Brazil); CSP (Brazil); Csepel (Hungary)
+Q5016928,Caerphilly F.C.,no results
+Q913041,Calcio Portogruaro Summaga,no confident match among: Portogruaro (Italy); Portogruaro (Italy)
+Q3650357,Calcio Schio 1905,no soccer results
+Q5019424,Caledonian F.C.,no confident match among: Caledonian Braves (Scotland); Inverness Caledonian Thistle (Scotland)
+Q1568677,Calgary Boomers,no soccer results
+Q176383,California Surf,no confident match among: California United Strikers FC (United States)
+Q5022904,Callosa Deportiva Club de Fútbol,no results
+Q18311,Cammell Laird F.C.,no results
+Q669553,Castillo CF,no soccer results
+Q2941543,Casuals F.C.,no confident match among: Walton Casuals (England); Corinthian-Casuals (England); Wolverhampton Casuals (England)
+Q1777557,Cefn Druids A.F.C.,no confident match among: Newi Cefn Druids (Wales)
+Q3664706,Centro Giovanile Virescit Boccaleone,no results
+Q115621941,Centro Histórico de Lebowski,no results
+Q1133759,Chicago Mustangs,no soccer results
+Q16201272,Chicago Spurs,no confident match among: Cape Town Spurs (South Africa); America CFL Spurs (United States); Tottenham Hotspur (England)
+Q670603,Chicago Sting,no confident match among: Cheadle Town Stingers (England)
+Q1195376,Ciudad de Murcia,no confident match among: Real Murcia (Spain); UCAM Murcia (Spain); Racing Murcia (Spain); UCAM Murcia B (Spain)
+Q5124894,Clackmannan F.C.,no results
+Q5125914,Clapton F.C.,no results
+Q2699446,Clausenengen FK,no results
+Q646088,Club Atletico All Boys,no confident match among: All Boys (Argentina)
+Q971490,Club Atlético Aldosivi,no confident match among: Aldosivi (Argentina)
+Q59962,Club Atlético Belgrano,no confident match among: Belgrano (Argentina); Belgrano U20 (Argentina); Belgrano de Zárate (Argentina); Sportivo Belgrano (Argentina)
+Q2333719,Club Atlético Estudiantes,no confident match among: Estudiantes Aruba (Aruba); Estudiantes de Mérida (Venezuela); Estudiantes de La Plata (Argentina); Estudiantes de San Luis (Argentina)
+Q5136249,Club Atlético Ferrocarril Midland,no confident match among: Ferrocarril Midland (Argentina)
+Q1773830,Club Atlético Patronato,no confident match among: Patronato (Argentina)
+Q151907,Club Atlético Platense,no confident match among: Platense (Argentina); Platense Zacatecoluca (El Salvador); Platense Puerto Cortés (Honduras)
+Q24185033,Club Deportivo Euzkadi,no results
+Q11955,Club Deportivo Guadalajara,no confident match among: Guadalajara (Spain); Guadalajara B (Spain); Guadalajara de Qaqachaca (Bolivia); CD Guadalajara (Mexico)
+Q8347106,Club Esportiu Sant Gabriel,no confident match among: Santanyí (Spain); Sant Jordi (Spain)
+Q5136272,Club Jalisco,no soccer results
+Q682393,Club de Fútbol Oaxtepec,no results
+Q4072168,Clube Atlético Sorocaba,no confident match among: Atlético CP (Portugal); Atlético FC (Ecuador); Atletico Uri (Italy); Atlético Cali (Colombia)
+Q777267,Clube de Regatas Guará,no confident match among: Guaraí (Brazil); Guarani (Brazil); Guarany (Brazil); Guaranda (Ecuador)
+Q5141516,Coimbra Esporte Clube,no confident match among: Académica-SF (Portugal); União de Coimbra (Portugal); Académica de Coimbra (Portugal)
+Q5142115,Colchester Town F.C.,no confident match among: Township Rollers (Botswana); Tavua (Fiji); Lye Town (England); Bala Town (Wales)
+Q2225911,Colorado Caribous,no confident match among: Colorado Storm (United States); Colorado Rapids (United States)
+Q936485,Coria CF,ambiguous: Coria CF (Spain); CD Coria (Spain)
+Q4896658,Cork Athletic F.C.,no confident match among: Athletic 220 (Mongolia); Athletic Bilbao (Spain); Athletic Newham (England); Athletic Club-MG (Brazil)
+Q4645182,Cork Bohemians F.C.,no confident match among: Bohemians (Ireland); Bohemians 1905 (Czechia); Bohemians 1905 B (Czechia)
+Q5176608,Coundon TT F.C.,no confident match among: TT Madzivhandila (South Africa)
+Q5202316,Cádiz CF B,no confident match among: Ba (Fiji); BAK (Turkey); BBB (Denmark); Be1 (Lithuania)
+Q5208484,Dagenham F.C.,no confident match among: Dagenham and Redbridge (England)
+Q1157920,Dalian Professional F.C.,no confident match among: Andijon (Uzbekistan); Dalian Yifang (China); Nyva Ternopil (Ukraine); Tahiti United (French Polynesia)
+Q9202604,Dallas Sidekicks,no confident match among: Dallas Trinity (United States)
+Q1158012,Dallas Tornado,no confident match among: Niger Tornadoes (Nigeria)
+Q24886174,Danok Bat CF,no confident match among: Batalhão (Brazil); Bath City (England); Bataguassu (Brazil); BATE Borisov (Belarus)
+Q5223999,Darlington Railway Athletic F.C.,no results
+Q5256553,Denaby United F.C.,no confident match among: United City (Philippines); United Aruba (Aruba); United Nordic (Sweden); United Victory (Maldives)
+Q130577113,Deportivo Coia,no results
+Q583671,Detroit Cougars,no soccer results
+Q5266007,Detroit Safari,no confident match among: Detroit City FC (United States)
+Q767400,Diósgyőri VTK,no confident match among: Diósgyőr (Hungary)
+Q2412739,Dolphin F.C.,no confident match among: Dauphins Noirs (DR Congo); Redcliffe Dolphins (Australia)
+Q3714092,Dopolavoro Cirio,no results
+Q5302484,Dover F.C.,no confident match among: Dover Athletic (England)
+Q5314829,Dundee Our Boys F.C.,no results
+Q5316298,Durban United F.C.,no confident match among: United City (Philippines); United Aruba (Aruba); United Nordic (Sweden); United Victory (Maldives)
+Q274465,E.C. Vitória,no confident match among: Vitória (Brazil); Vitória-ES (Brazil); Vitória Women (Brazil); Vitória de Setúbal (Portugal)
+Q786430,EC Granollers,no soccer results
+Q55639624,EDMF Churra,no results
+Q112841080,EF Barberà Andalucía,no results
+Q1309487,Eintracht Gelsenkirchen,no confident match among: Eintracht Celle (Germany); Eintracht Trier (Germany); Eintracht Rheine (Germany); Eintracht Bamberg (Germany)
+Q11966933,Ekholt BK,no results
+Q429546,El Jaish SC,no confident match among: Al-Jaish (Syria)
+Q5365253,Ellesmere Port Town F.C.,no confident match among: Portishead Town (England); Port Talbot Town (Wales); Portishead Town Women (England)
+Q1371345,Ethnikos O.F.P.F. (men's association football),no results
+Q994224,Extremadura UD,ambiguous: Extremadura (Spain); CD Extremadura (Spain)
+Q1153687,F.C. AlzanoCene 1909,no results
+Q1057306,F.C. Bolzano 1996,no confident match among: Virtus Bolzano (Italy)
+Q3747643,F.C. Ebedei,no results
+Q18389779,F.C. Union Pro Mogliano-Preganziol A.S.D.,no results
+Q3747642,F.C.D. Dolo 1909,no confident match among: Dolorense (Spain); Dolomiti Bellunesi (Italy); Jura Dolois (France)
+Q2249141,F.C.D. Pro Vasto,no results
+Q1088962,F.S. Sestrese Calcio 1919,no confident match among: FSC Mariupol (Ukraine); FShM Torpedo (Russia); FSK Dyatlovo (Belarus); FSV Salmrohr (Germany)
+Q17166548,FC Baník Prievidza,no soccer results
+Q2346842,FC Barcelona C,no confident match among: CAI (Argentina); CRB (Brazil); CSA (Brazil); CSE (Brazil)
+Q966296,FC Caracal,no results
+Q204237,FC Dinamo Bucharest,no confident match among: Dinamo București (Romania)
+Q281861,FC Dinamo-Juni Minsk,no soccer results
+Q2383416,FC Drobeta-Turnu Severin,no results
+Q42412,FC Emmenbrücke,no results
+Q2340450,FC Hebros,no results
+Q740568,FC Kaisar,no confident match among: Kaisar Kyzylorda (Kazakhstan); Asteras Kaisarianis (Greece)
+Q383196,FC Kärnten,no confident match among: Austria Kärnten (Austria)
+Q388972,FC Metalurh Donetsk,no confident match among: Olimpik Donetsk (Ukraine); Metalurg Donetsk (Ukraine); Shakhtar Donetsk (Ukraine); Shakhtar Donetsk Youth (Ukraine)
+Q659924,FC Olt Scornicești,no confident match among: Oltrepò (Italy); Oltul Curtișoara (Romania); Turris-Oltul T. Măgurele (Romania)
+Q1195647,FC Progresul București,no confident match among: FCSB (Romania); Rapid București (Romania); Dinamo București (Romania); Juventus Bucuresti (Romania)
+Q244317,FC Pyunik,no confident match among: Pyunik Academy (Armenia); Pyunik Yerevan (Armenia); Pyunik Yerevan Women (Armenia); Pyunik Yerevan Youth (Armenia)
+Q161074,FC Sachsen Leipzig,no confident match among: RB Leipzig (Germany); Chemie Leipzig (Germany); RB Leipzig Women (Germany); RB Leipzig Youth (Germany)
+Q16565840,FC Sochaux-Montbéliard II,no confident match among: Sochaux (France); Sochaux II (France)
+Q664127,FC Zlaté Moravce,no confident match among: Termit Moravče (Slovenia); ViOn Zlaté Moravce (Slovakia)
+Q651198,FK BSK Borča,no confident match among: BSK Banja Luka (Bosnia and Herzegovina); BSK Bijelo Brdo (Croatia)
+Q2123289,FK Bor,no confident match among: Borec (Macedonia); Borgo (France); Borens (Sweden); Boreale (Italy)
+Q162467,FK Drnovice,no results
+Q239018,FK Hajduk Kula,no soccer results
+Q5426338,FK Polimlje,no results
+Q208574,FK Rabotnički,no confident match among: Rabotnichki Youth (Macedonia)
+Q2505672,FK Srem,no confident match among: FK Donji Srem (Serbia); Radnički Sremska Mitrovica (Serbia)
+Q2205503,FSV Velten,no confident match among: FSV Salmrohr (Germany); FSV Frankfurt (Germany); FSV Gütersloh (Germany); FSV Babelsberg (Germany)
+Q1389913,FV Bad Honnef,no confident match among: Baden (Switzerland); Badajoz (Spain); Badalona (Spain); Badbaado (Somalia)
+Q896006,FVgg Kastel 06,no results
+Q279311,Fall River F.C.,no confident match among: River-PI (Brazil); River-RR (Brazil); Riverball (Finland); River Ebro (Spain)
+Q5464521,Folkestone F.C.,no confident match among: Folkestone Invicta (England)
+Q862851,Foolad F.C.,no confident match among: Foolad Khuzestan (Iran); Sepahan (Iran)
+Q3747545,Foot-Ball Club Internazionale-Naples,no results
+Q2868213,Football Club Atletico Montichiari,no confident match among: Atletico Lusaka (Zambia); Paris 13 Atletico (France)
+Q3076526,Football Club Pastore,no confident match among: Pastoreo (Paraguay)
+Q3747792,Football Club Rhodense,no confident match among: Football Primetime (Sweden); Ba (Fiji); AFC (The Netherlands); Goa (India)
+Q5466584,Footscray JUST,no confident match among: Justo José de Urquiza (Argentina); Atlètic Sant Just (Spain); Defensa y Justicia (Argentina); St-Just St-Rambert (France)
+Q5290382,Formby F.C.,no results
+Q6502565,Fort Lauderdale Strikers,no confident match among: Fort Lauderdale United (United States); Fort Lauderdale Strickers (United States); Fort Lauderdale United Women (United States); Inter Miami II (United States)
+Q2313851,Fort Lauderdale Strikers,no confident match among: Fort Lauderdale United (United States); Fort Lauderdale Strickers (United States); Fort Lauderdale United Women (United States); Inter Miami II (United States)
+Q5471479,Fort Lauderdale Sun,no confident match among: Fort Lauderdale United (United States); Fort Lauderdale Strickers (United States); Fort Lauderdale United Women (United States); Inter Miami II (United States)
+Q665690,Fortitudo-Pro Roma S.G.S.,no results
+Q3631057,Forza e Coraggio Avezzano,no results
+Q5492264,Frankston Pines,no soccer results
+Q5501053,Freemantle F.C.,no results
+Q3084434,G.D. Ribeirão,no confident match among: Comercial (Brazil); Botafogo-SP (Brazil)
+Q961663,G.S.F. Giovanni Grion Pola,no results
+Q5519517,Galáctico Pegaso,no results
+Q13004,Gansu Tianma F.C.,no results
+Q20639125,Ganz-MÁVAG SE,no results
+Q61365635,Gatika Kirol Taldea,no results
+Q5552244,Germiston Callies F.C.,no confident match among: Tambankulu Callies (Swaziland)
+Q5566676,Glapwell F.C.,no results
+Q5566881,Glasgow Perthshire F.C.,no confident match among: Glasgow City Women (Scotland); Glasgow University F.C. (Scotland); Celtic (Scotland); Rangers (Scotland)
+Q5567162,Glasshoughton Welfare A.F.C.,no confident match among: Llay Welfare (Wales); Whitehill Welfare F.C. (Scotland); Horden Community Welfare (England); Kimberley Miners Welfare (England)
+Q16840060,Glenbuck Cherrypickers F.C.,no results
+Q5597919,Gravesend United F.C.,no confident match among: United City (Philippines); United Aruba (Aruba); United Nordic (Sweden); United Victory (Maldives)
+Q5290543,Great Harwood Town F.C.,no results
+Q5601515,Grebbestads IF,no results
+Q3093415,Gruppo Sportivo Calcio Banco di Roma,no results
+Q3788631,Guizhou F.C.,no confident match among: Guizhou Renhe (China); Guizhou Xufengtang (China); Guizhou Guiyang Athletic (China); Guizhou Hengfeng Zhicheng (China)
+Q16957785,Gurutzeta KFT,no confident match among: Eger (Hungary)
+Q1508540,Gårda BK,no confident match among: Gardabani (Georgia); KFG Garðabæjar (Iceland); U.S.D. Dro Alto Garda Calcio (Italy)
+Q183525,HNK Trogir,no results
+Q19568918,Halliwell F.C.,no results
+Q584858,Halmstads BK,no confident match among: Halmstad (Sweden)
+Q445051,Hamborn 07,no confident match among: 07 Vestur (Faroe Islands); 07 Vestur II (Faroe Islands)
+Q5644342,Hamburger SV II,no confident match among: III. Kerületi (Hungary)
+Q1140139,Hayes F.C.,no confident match among: Hayes and Yeading United (England); Presidente Hayes (Paraguay); 12 de Junio de Villa Hayes (Paraguay)
+Q23463399,Hebburn Argyle F.C.,no confident match among: Plymouth Argyle (England); Plymouth Argyle Women (England)
+Q2835820,Hellenic F.C.,no confident match among: Hellenic Athletic (Australia)
+Q4076084,Hellín CF,no results
+Q207503,Helsingborgs IF,no results
+Q208584,Helsingin Jalkapalloklubi,no confident match among: PJK (Finland); OuJK (Finland); HJK Helsinki (Finland)
+Q289720,Herfølge Boldklub,no confident match among: FB (Denmark); ØB (Denmark); BBB (Denmark); Gug (Denmark)
+Q58196856,Hungaria,no confident match among: MTK Budapest (Hungary)
+Q2321833,Huracán de Tres Arroyos,no confident match among: Huracán de Treinta y Tres (Uruguay)
+Q5946693,Hurlford United F.C.,no confident match among: United City (Philippines); United Aruba (Aruba); United Nordic (Sweden); United Victory (Maldives)
+Q5962715,Hyvinkään Palloseura,no confident match among: EPS (Finland); HPS (Finland); IPS (Finland); LPS (Finland)
+Q5970920,IF Warta,no confident match among: Warta Poznań (Poland); Warta Sieradz (Poland); Warta Gorzów Wielkopolski (Poland)
+Q1542525,IK Grand Bodø,no confident match among: GOAL FC (France); Da Grande (Maldives); Grand-Leez (Belgium); Rio Grande (Finland)
+Q18295,Ilkeston F.C.,no confident match among: Ilkeston Town (England)
+Q6017581,Independente Futebol Clube,no confident match among: Independente-AP (Brazil); Independente-PA (Brazil); Amazônia (Brazil); São Joseense (Brazil)
+Q16848188,Internapoli F.C.,no results
+Q3153884,Inverness Thistle F.C.,no confident match among: Buckie Thistle (Scotland); Partick Thistle (Scotland); Bonnyton Thistle (Scotland); Dalkeith Thistle (Scotland)
+Q3804501,Itaperuna Esporte Clube,no results
+Q61364662,Iturrigorri Kirol Elkartea,no confident match among: Añorga (Spain); Pasaia (Spain); Beasain (Spain); Touring (Spain)
+Q61365632,Iurretako Kirol Taldea,no results
+Q1132352,Jacksonville Tea Men,no confident match among: Australia U17 (Australia)
+Q4160534,Jewish Guild,no confident match among: Guildford City (England)
+Q925648,Jiangsu F.C.,no confident match among: Jiangsu Sainty (China); Jiangsu Landhouse Dong Victory (China)
+Q72521,Johor Darul Takzim F.C.,no confident match among: Johor Darul Ta'zim (Malaysia)
+Q2107075,Juventus Italia Football Club,no results
+Q1423718,K.A.S. Eupen,no confident match among: Eupen (Belgium); Eupen 1963 (Belgium)
+Q2539148,K.F.C. Denderleeuw Eendracht Hekelgem,no results
+Q2694024,K.R.C. Zuid-West-Vlaanderen,no results
+Q221940,K.S.C. Lokeren Oost-Vlaanderen,no results
+Q4993837,KFUMs Boldklub,no confident match among: FB (Denmark); ØB (Denmark); BBB (Denmark); Gug (Denmark)
+Q20032615,KS Częstochowa,no confident match among: Skra Częstochowa (Poland); Raków Częstochowa (Poland)
+Q18704184,Karlsruher SC II,no confident match among: III. Kerületi (Hungary)
+Q2494190,King's Lynn F.C.,no confident match among: King's Lynn Town (England)
+Q1982166,King's Park F.C.,no confident match among: Parkgate (England); South Park (England); Moyola Park (Northern Ireland); Queen's Park (Scotland)
+Q1359341,Kjøbenhavns Boldklub,no confident match among: FB (Denmark); ØB (Denmark); BBB (Denmark); Gug (Denmark)
+Q846368,Knattspyrnudeild UMFG,no confident match among: Grindavík (Iceland)
+Q6421833,Knebworth F.C.,no results
+Q690272,Kremser SC,no confident match among: Krems (Austria)
+Q812716,Kuwait SC,ambiguous: Kuwait (Kuwait); Kuwait SC (Kuwait)
+Q290486,L'Etoile de Morne-à-l'Eau,no confident match among: Etoile de Morne-à-lEau (France)
+Q6473663,Lai Sun F.C.,no confident match among: Sundby (Denmark); Sunrise (Rwanda); Sundsvall (Sweden); Sunnersta (Sweden)
+Q61362304,Lakua Kirol Elkartea,no confident match among: Añorga (Spain); Pasaia (Spain); Beasain (Spain); Touring (Spain)
+Q6489592,Larkhall Thistle F.C.,no confident match among: Buckie Thistle (Scotland); Partick Thistle (Scotland); Bonnyton Thistle (Scotland); Dalkeith Thistle (Scotland)
+Q6508701,Leadgate Park F.C.,no confident match among: Parkgate (England); Park City Red Wolves (United States); South Park (England); Moyola Park (Northern Ireland)
+Q6519242,Leicester United F.C.,no confident match among: United City (Philippines); United Aruba (Aruba); United Nordic (Sweden); United Victory (Maldives)
+Q2841225,Leith Athletic F.C.,no confident match among: Athletic 220 (Mongolia); Athletic Bilbao (Spain); Athletic Newham (England); Athletic Club-MG (Brazil)
+Q6533188,Letchworth F.C.,no results
+Q6538141,Leyton F.C.,no confident match among: Leyton Orient (England); Leyton Orient Women (England); Walthamstow (England)
+Q6538163,Leytonstone F.C.,no results
+Q16591640,Lille OSC II,no confident match among: Lille (France); OSC Bremerhaven (Germany)
+Q291848,Llanelli A.F.C.,no confident match among: Llanelli Town (Wales)
+Q1781210,London XI,no confident match among: Xinabajul (Guatemala); Xiamen Feilu (China); Xiamen Chengyi (China); Xi'an Hi-Tech Yilian (China)
+Q6463150,Lorca Fútbol Club,no confident match among: Lorca FC (Spain); Lorca Deportiva (Spain)
+Q6692209,Lovell's Athletic F.C.,no confident match among: TRAU (India); Arles (France); Grays (England); Horoya (Guinea)
+Q479301,Ludwigsfelder FC,no results
+Q317934,Lüneburger SK,no confident match among: Lüneburger SK Hansa (Germany)
+Q954970,M.A.T.E.R.,no confident match among: Matera (Italy)
+Q611243,MTV München 1879,no confident match among: 1860 Munich (Germany); Bayern Munich (Germany); 1860 Munich II (Germany); Bayern Munich II (Germany)
+Q318698,MYPA,ambiguous: MyPa (Finland); MyPa FC (Finland)
+Q6747305,Manchester Central F.C.,no confident match among: Central FC (Trinidad and Tobago); Central SC (Brazil); Central Coast (Solomon Islands); Central Norte (Argentina)
+Q6747467,Manchester North End F.C.,no confident match among: North End United (Ireland); Dundee North End (Scotland); Glossop North End (England); Preston North End (England)
+Q2251415,Marsala Football Club,no confident match among: Football Primetime (Sweden); Ba (Fiji); AFC (The Netherlands); Goa (India)
+Q6781195,Maryhill F.C.,no results
+Q385971,Melbourne Hakoah,no confident match among: Hakoah Amidar Ramat Gan (Israel)
+Q1519427,Merthyr Tydfil F.C.,no confident match among: Merthyr Town (Wales)
+Q2797432,Miami Toros,no soccer results
+Q6840989,Mid Rhondda F.C.,no confident match among: Midnimo (Somalia); Midleton (Ireland); Middelfart (Denmark); Middelfart II (Denmark)
+Q6851109,Mile Oak Rovers & Youth F.C.,no results
+Q1133687,Minnesota Kicks,no confident match among: KickStart Rush (Barbados); DFeeters Kicks (United States)
+Q13858732,Minnesota Strikers,no confident match among: Strikers Bertil (Finland); Dublanc (Dominica); Plateau United (Nigeria); Silver Strikers (Malawi)
+Q929697,Moghreb Atlético Tetuán,no confident match among: Atlético Tetuán (Spain)
+Q3319507,Molinella Calcio 1911,no results
+Q12254089,Mondragón CF,no results
+Q959086,NK Lokomotiva,no confident match among: Lokomotíva Košice (Slovakia); Lokomotiva Zagreb (Croatia); Lokomotiva Zagreb Youth (Croatia)
+Q1274317,NK Marsonia,no results
+Q6957264,Nacional Atlético Clube,no confident match among: Atlético CP (Portugal); Atlético FC (Ecuador); Atletico Uri (Italy); Atlético Cali (Colombia)
+Q130576897,Navia CF (Vigo),no confident match among: Vigør (Norway); Vigor Lamezia (Italy); Vigor Senigallia (Italy); Hamme (Belgium)
+Q905968,Neath F.C.,no results
+Q218074,Neftchi Baku PFC,no confident match among: Neftçi PFK (Azerbaijan)
+Q7005470,New Bedford Whalers,no results
+Q2365092,New England Tea Men,no results
+Q9201193,New York Arrows,no confident match among: New York Cosmos (United States); New York City FC (United States)
+Q7013484,New York Express,no confident match among: New York Cosmos (United States); New York City FC (United States)
+Q2710159,New York Generals,no confident match among: New York Cosmos (United States); New York City FC (United States)
+Q1925589,New York Giants,no soccer results
+Q7017405,Newcastle East End F.C.,no confident match among: East End Lions (Sierra Leone)
+Q10856254,Newcastle West End F.C.,no results
+Q7018390,Newmains United Community F.C.,no results
+Q2726770,Nithsdale Wanderers F.C.,no confident match among: Wanderers de Durazno (Uruguay); HFX Wanderers (Canada); Bray Wanderers (Ireland); Cray Wanderers (England)
+Q14884144,North Jersey Imperials,no results
+Q2111007,North Shore United AFC,no results
+Q7057451,North York Rockets,no confident match among: North Carolina Courage (United States)
+Q1140282,Northern Fury FC,no confident match among: Ottawa Fury FC (Canada)
+Q7058794,Northern Nomads F.C.,no confident match among: Nomads United (New Zealand); Anstey Nomads (England); Connah's Quay Nomads (Wales)
+Q1749908,Northern Spirit FC,no confident match among: NWS Spirit (Australia); Coastal Spirit (New Zealand); Washington Spirit (United States)
+Q7059418,Northfleet United F.C.,no confident match among: United City (Philippines); United Aruba (Aruba); United Nordic (Sweden); United Victory (Maldives)
+Q730213,Notts Rangers F.C.,no confident match among: Rangers (Scotland); Rangers B (Scotland); Rangers U20 (Scotland); Rangers Women (Scotland)
+Q7064111,Nova Scotia Clippers,no soccer results
+Q652008,Novelda CF,no results
+Q779148,Nuorese Calcio,no results
+Q7073828,Oakengates Athletic F.C.,no confident match among: Athletic 220 (Mongolia); Athletic Bilbao (Spain); Athletic Newham (England); Athletic Club-MG (Brazil)
+Q693512,Oakland Clippers,no soccer results
+Q1842584,Oakland Stompers,no confident match among: Oakland Roots (United States); Oakland County (United States)
+Q1961435,Oklahoma City Slickers,no soccer results
+Q2018179,Olaria Atlético Clube,no confident match among: Atlético CP (Portugal); Atlético FC (Ecuador); Atletico Uri (Italy); Atlético Cali (Colombia)
+Q3882141,Omegna Calcio 1906,no results
+Q916068,Orange County Blue Star,no results
+Q61364709,Ortuella Kirol Elkartea,no confident match among: Añorga (Spain); Pasaia (Spain); Beasain (Spain); Touring (Spain)
+Q18328,Ossett Town F.C.,no confident match among: Township Rollers (Botswana); Tavua (Fiji); Lye Town (England); Bala Town (Wales)
+Q1751307,Oswestry Town F.C.,no confident match among: Township Rollers (Botswana); Tavua (Fiji); Lye Town (England); Bala Town (Wales)
+Q7124332,Paget Rangers F.C.,no confident match among: Rangers (Scotland); Rangers B (Scotland); Rangers U20 (Scotland); Rangers Women (Scotland)
+Q3268410,Palloseura Kemi Kings,no confident match among: KePS (Finland)
+Q16847168,Pannaxiakos F.C.,no soccer results
+Q7138484,Parkhead F.C.,no results
+Q513898,Parramatta Power,no confident match among: Power Dynamos (Zambia); DC Power (United States); Blacks Power (Uganda); Racing Power (Portugal)
+Q967213,Pawtucket Rangers,no confident match among: Rangers (Scotland); Rangers B (Scotland); Rangers U20 (Scotland); Rangers Women (Scotland)
+Q7159367,Pedrabranca Futebol Clube,no results
+Q7160144,Peebles Rovers F.C.,no confident match among: Rovers (United States Virgin Islands); Rovers (Guam); TSS Rovers (Canada); Raith Rovers (Scotland)
+Q136680236,Perpignan FC,no soccer results
+Q7177988,Peterborough & Fletton United F.C.,no results
+Q7182674,Philadelphia Fever,no soccer results
+Q19577553,Philadelphia Fury,no confident match among: Ottawa Fury FC (Canada)
+Q961300,Philadelphia Fury,no confident match among: Ottawa Fury FC (Canada)
+Q617439,Piemonte FC,no soccer results
+Q19877114,Point Cook SC,no confident match among: Cook Islands (Cook Islands); Cooks Hill United (Australia)
+Q3393891,Poitiers FC,no soccer results
+Q1091208,Pol. Monterotondo Lupa,no results
+Q602827,Police Tebrau F.C.,no confident match among: Police XI (Botswana); Police Tero (Thailand); PDRM (Malaysia); PSNI (Northern Ireland)
+Q16329329,Pontioi Verias F.C.,no results
+Q2778613,Port Glasgow Athletic F.C.,no results
+Q1525331,Pune FC,no soccer results
+Q7262776,Pwllheli F.C.,no results
+Q1051203,Qatar SC,ambiguous: Qatar (Qatar); Qatar SC (Qatar)
+Q3866968,Qingdao F.C.,no confident match among: Qingdao Fuli (China); Qingdao Hainiu (China); Qingdao Huanghai (China); Qingdao May Wind (China)
+Q1431996,Quimper Kerfeunteun F.C.,no confident match among: Stade Quimperlois (France)
+Q2062274,R.O.C. de Charleroi-Marchienne,no confident match among: Olympic Charleroi (Belgium)
+Q1271664,RC Roubaix,no confident match among: CO Roubaix-Tourcoing (France); Racing Club de Roubaix (France)
+Q2039916,RCH,no soccer results
+Q18487,Rainworth Miners Welfare F.C.,no confident match among: Kimberley Miners Welfare (England); Easthouses Lily Miners Welfare F.C. (Scotland)
+Q7292789,Rangers F.C.,ambiguous: Rangers (Scotland); AC Rangers (DR Congo)
+Q2698432,Real Betis B,no confident match among: Real Betis (Spain); Betis Féminas (Spain); Betis Deportivo (Spain); Betis Valladolid (Spain)
+Q7301102,Real Valladolid B,no confident match among: Real Valladolid (Spain); Betis Valladolid (Spain); Real Valladolid Promesas (Spain)
+Q1387562,Renton F.C.,no results
+Q5290448,Rossendale United F.C.,no confident match among: United City (Philippines); United Aruba (Aruba); United Nordic (Sweden); United Victory (Maldives)
+Q7373644,Royal Albert F.C.,no confident match among: Alberts (Latvia); Mons (Belgium); JDFS Alberts (Latvia); Hawick Royal Albert United F.C. (Scotland)
+Q9323399,Rozwój Katowice,no confident match among: GKS Katowice (Poland); Sparta Katowice (Poland); GKS Katowice Women (Poland)
+Q1138515,Rushden & Diamonds F.C.,no confident match among: Manica Diamonds (Zimbabwe); Urawa Red Diamonds (Japan); Rushden and  Diamonds (England); AFC Rushden and Diamonds (England)
+Q630227,S.C. Campomaiorense,no results
+Q1031307,S.C. Freamunde,no results
+Q3094781,S.G. Gallaratese A.S.D.,no results
+Q3963603,S.S. Juvenes,no confident match among: Juvenes/Dogana (San Marino)
+Q950089,S.S. Racing Club Fondi,no confident match among: Genk (Belgium); Grasse (France); Épernay (France); Mormont (Belgium)
+Q3963742,S.S. Romulea,no confident match among: SSGC (Pakistan); SSEP Hombourg-Haut (France); SSh 7 Petrozavodsk (Russia); SS Virtus Lanciano 1924 (Italy)
+Q3659833,S.S.D. Calcio San Donà,no confident match among: San Donato Tavarnelle (Italy)
+Q3625862,S.S.D. Group Città di Castello,no results
+Q1968424,S.S.D. Massese,no confident match among: Martina (Italy); Palermo (Italy); Vigasio (Italy); Acireale (Italy)
+Q15140971,S.S.D. Puteolana 1902 Internapoli,no results
+Q320541,SC Herford,no results
+Q940001,SC Sétois,no results
+Q648382,SC Veendam,no results
+Q666036,SC Westfalia Herne,no confident match among: Herne Bay (England)
+Q1065084,SCD Durango,no confident match among: Cultural Durango (Spain); Alacranes de Durango (Mexico)
+Q3963253,SD Balmaseda FC,no results
+Q910711,SD Erandio Club,no results
+Q912844,SD Indautxu,no results
+Q7389520,SD Lagunak,no results
+Q7389519,SD Lagunak,no results
+Q2006217,SD Lemona,no results
+Q847105,SD Logroñés,ambiguous: SD Logroñés (Spain); UD Logroñés (Spain)
 Q3933827,SD Retuerto Sport,no results
+Q3323820,SD San Pedro,ambiguous: FC San Pédro (Ivory Coast); UD San Pedro (Spain)
+Q2206110,SG Union Solingen,no confident match among: UDJ (Ecuador); Auby (France); Ivry (France); Raon (France)
+Q935298,SK Haugar,no results
+Q4581416,SK Herd,no soccer results
+Q318080,STV Horst-Emscher,no results
+Q3494142,SU Agen Football,no soccer results
+Q874360,SV 1919 Bernbach,no results
+Q819623,SV Blau Weiss Berlin,no confident match among: Blau-Weiß 90 Berlin (Germany)
+Q937095,SV Holzwickede,no results
+Q826473,SV Hüsten 09,no results
+Q1654823,SV Neckargerach,no results
+Q175616,SV Seligenporten,no results
+Q3099791,Sabah F.C.,ambiguous: Sabah (Malaysia); Sabah FC (Azerbaijan)
+Q3526066,San Antonio Thunder,no confident match among: San Antonio (United States); San Antonio FC (Ecuador); San Antonio FC 2 (United States); San Antonio Unido (Chile)
+Q847077,San Fernando Island Sports Club S.A.D,no results
+Q4006951,San Frediano Rondinella S.S.,no results
+Q123019092,San Viator Kirol Elkartea,no results
+Q7419216,Santa Barbara Condors,no soccer results
+Q958536,Santiago National,no confident match among: National Police (Cambodia); National Defense (Cambodia); National Bank of Egypt (Egypt); National Sports Academy (Cambodia)
 Q389900,Santutxu FC,no results
-Q1032444,Sestao Sport Club,no results
-Q11971,Sociedad Deportiva Huesca,no confident match among: Huesca (Spain)
-Q193377,Stade Malherbe Caen,no results
-Q29400,Taranto Sport,no results
-Q611222,Treviso F.B.C. 1993,no results
-Q298217,U.S. Avellino 1912,no results
-Q847587,U.S. Salernitana 1919,no results
+Q2164267,Sea Bee,no confident match among: Beerschot (Belgium); Beerschot AC (Belgium); London Bees (England); Wegberg-Beeck (Germany)
+Q2056983,Seattle Storm,no confident match among: Stormers SC (Bolivia); Stormers San Lorenzo (Bolivia)
+Q2522173,Seiko SA,no confident match among: Såby (Denmark); Safa (Lebanon); SAPA (Finland); Sabah (Malaysia)
+Q7447562,Selby Town F.C.,no confident match among: Township Rollers (Botswana); Tavua (Fiji); Lye Town (England); Bala Town (Wales)
+Q11999898,Sem IF,no confident match among: Semen Padang (Indonesia); Sembrando Buenos Campeones (Ecuador); Elimai Semey (Kazakhstan); PSIS Semarang (Indonesia)
+Q1032444,Sestao Sport Club,no confident match among: Sestao River (Spain)
+Q424943,Shabab AlAhli Dubai Club,no results
+Q18162260,Shirebrook Miners Welfare F.C.,no confident match among: Kimberley Miners Welfare (England); Easthouses Lily Miners Welfare F.C. (Scotland)
+Q138248,Sint-Truidense V.V.,no results
+Q5409057,Sociedad Deportiva Urola,no results
+Q375697,Sociedade Esportiva do Gama,no confident match among: Gama (Brazil); SD Gama (Spain); Vasco da Gama (Brazil); Vasco da Gama-AC (Brazil)
+Q3963306,Società Calcio Leffe,no results
+Q3963479,Società Sportiva Calcio Campania,no results
+Q104860040,Sodupe UC,no confident match among: UCC (Ireland); UCD (Ireland)
+Q9211155,Sollentuna United FF,no confident match among: USA (United States); Jeju SK (South Korea); Seraing (Belgium); Siwelele (South Africa)
+Q7566234,South Bank F.C.,no confident match among: Banks o' Dee (Scotland); KCB (Kenya); CBE SA (Ethiopia); AC Taipei (Taiwan)
+Q7566867,South Coast United,no confident match among: Gold Coast United (Australia)
+Q7569724,Southern California Lazers,no confident match among: Southern California Eagles (United States)
+Q2306167,SpVg Marl,no confident match among: Marlow (England); Marloie Sport (Belgium)
+Q3163786,SpVgg Blau-Weiß 1890 Berlin,no confident match among: Blau-Weiß 90 Berlin (Germany)
+Q326633,SpVgg Herten,no confident match among: Bayreuth (Germany); Ansbach 09 (Germany); Elversberg (Germany); Unterhaching (Germany)
+Q7579313,Sport Club Barueri,no results
+Q1056987,Sporting Toulon Var,no soccer results
+Q2982210,Sporting de Gijón B,no confident match among: Gijón Industrial (Spain); Sporting Atlético (Spain); Sporting de Gijón (Spain)
+Q7595426,St Roch's F.C.,no confident match among: Rocha (Uruguay); Rochdale (England); Rochester FC (United States); La Roche-sur-Yon (France)
+Q2032836,St. Bernard's F.C.,no confident match among: São Bernardo (Brazil); General Caballero de Campo Grande (Paraguay)
+Q967597,St. Catharines Wolves,no results
+Q3077214,St. George Saints Football Club,no results
+Q7589535,St. Leonards F.C.,no confident match among: ST4Y (Finland); STPS (Finland); Start (Norway); StaSi (Finland)
+Q109507023,Stade Lavallois B,no confident match among: Ba (Fiji); BAK (Turkey); BBB (Denmark); Be1 (Lithuania)
+Q7597342,Stalybridge Rovers F.C.,no confident match among: Rovers (United States Virgin Islands); Rovers (Guam); TSS Rovers (Canada); Raith Rovers (Scotland)
+Q16850798,Stanley United F.C.,no confident match among: United City (Philippines); United Aruba (Aruba); United Nordic (Sweden); United Victory (Maldives)
+Q1909326,Sterkrade 06/07,no results
+Q5290157,Stockport Sports F.C.,no confident match among: JKU (Worldwide); OKS (Denmark); Sur (Oman); Buru (Maldives)
+Q7618228,Stockton F.C.,no confident match among: Stockton Town (England)
+Q7618577,Stokke IL,no confident match among: Ilves (Finland); Ilford (England); Ilirija (Slovenia); Illueca (Spain)
+Q18128453,Strathclyde F.C.,no results
+Q1354077,Sun Hei SC,no confident match among: Heide (Germany); Heino (The Netherlands); Heist (Belgium); Heidenheim (Germany)
+Q765616,Sundbybergs IK,no confident match among: IK Zenith (Sweden); IK Ilmajoki (Finland); Ikorodu City (Nigeria); IK Frej Taeby (Sweden)
+Q7650326,Sutton Town A.F.C.,no confident match among: Township Rollers (Botswana); Tavua (Fiji); Lye Town (England); Bala Town (Wales)
+Q3506172,Suzzara Calcio 2000,no results
+Q16637410,TSG 1899 Hoffenheim II,no confident match among: Hoffenheim II (Germany); Hoffenheim (Germany); Hoffenheim Youth (Germany); 1899 Hoffenheim Women (Germany)
+Q7671747,TSV 1860 München II,no confident match among: III. Kerületi (Hungary)
+Q2385075,TSV Chemie Premnitz,no confident match among: Chemie Leipzig (Germany); Chemie Leipzig Women (Germany); Hallescher (Germany)
+Q2290788,Talavera CF,no confident match among: Talavera de la Reina (Spain)
+Q531108,Third Lanark A.C.,no confident match among: RKC Third Coast (United States)
+Q4384426,Thurrock F.C.,no confident match among: East Thurrock United (England)
+Q7804600,Timbaúba Futebol Clube,no results
+Q7809016,Tipton Town F.C.,no confident match among: Township Rollers (Botswana); Tavua (Fiji); Lye Town (England); Bala Town (Wales)
+Q162923,Tiro Federal,no soccer results
+Q1440594,Tobago United F.C.,no confident match among: United City (Philippines); United Aruba (Aruba); United Nordic (Sweden); United Victory (Maldives)
+Q9088182,Tomelloso CF,no results
+Q2610953,Ton Pentre F.C.,no confident match among: Tona (Spain); Tonga (Tonga); Tondela (Portugal); Tongeren (Belgium)
+Q943132,Total Chalaco,no confident match among: TSS Rovers (Canada); The New Saints (England)
+Q7862175,Tårnby Boldklub,no confident match among: FB (Denmark); ØB (Denmark); BBB (Denmark); Gug (Denmark)
+Q211401,U.D. Leiria,no confident match among: União de Leiria (Portugal)
+Q4005045,U.S. Canzese,no results
+Q1056821,U.S. Città di Pontedera S.S.D.,no results
+Q1328077,U.S. Fiumana,no results
+Q1416763,U.S. Gavorrano,no confident match among: Follonica Gavorrano (Italy)
+Q4005295,U.S. Opitergina,no results
+Q4005375,U.S. Russi,no confident match among: Russia (Russia); Russia U17 (Russia); Russia Women (Russia); Russia Women (Russia)
+Q3328717,UD Los Palacios,no confident match among: Los Andes (Argentina); Los Garres (Spain); Los Chankas (Peru); Lossiemouth (Scotland)
+Q2300929,UD Pájara Playas de Jandía,no results
+Q21039376,UD San Pedro,ambiguous: FC San Pédro (Ivory Coast); UD San Pedro (Spain)
+Q2220788,UDA Gramenet,no confident match among: UDA Soccer NMSU (Uganda)
 Q3752096,UDC Chantrea,no results
-Q837218,UE Lleida,no confident match among: Atlètic Lleida (Spain); Lleida Esportiu (Spain)
-Q6767,US Livorno 1915,no results
-Q10407,Unión Deportiva Almería,no confident match among: Almería (Spain); Almería B (Spain)
-Q8643,Vicenza Calcio,no confident match among: Vicenza Femminile (Italy)
-Q19482,Wimbledon F.C.,ambiguous: Wimbledon FC (England); AFC Wimbledon (England)
+Q742953,UE Figueres,no confident match among: Uerdingen 05 (Germany); UE Santa Coloma (Andorra); UE Sant Julià II (Andorra); UE Santa Coloma B (Andorra)
+Q837218,UE Lleida,no confident match among: Lleida Esportiu (Spain); Atlètic Lleida (Spain)
+Q2297920,UE Sants,no confident match among: Uerdingen 05 (Germany); UE Santa Coloma (Andorra); UE Sant Julià II (Andorra); UE Santa Coloma B (Andorra)
+Q7864446,UE Tàrrega,no confident match among: Uerdingen 05 (Germany); UE Santa Coloma (Andorra); UE Sant Julià II (Andorra); UE Santa Coloma B (Andorra)
+Q6156917,UE Valls,no confident match among: Uerdingen 05 (Germany); UE Santa Coloma (Andorra); UE Sant Julià II (Andorra); UE Santa Coloma B (Andorra)
+Q112840839,UFB Jàbac i Terrassa,no results
+Q2868212,UFM Monfalcone,no results
+Q528226,UJA Maccabi Paris Métropole,no results
+Q3736170,US Joué-lès-Tours,no results
+Q1573081,US Marocaine Casablanca,no confident match among: Raja Casablanca (Morocco); Tihad Casablanca (Morocco); Wydad Casablanca (Morocco); Étoile de Casablanca (Morocco)
+Q4005296,US Miranese Calcio,no results
+Q4005298,USD Osimana,no confident match among: Adriese (Italy); Palmese (Italy); Lavagnese (Italy); Caravaggio (Italy)
+Q4004981,Unione Sportiva Altamura,no confident match among: Team Altamura (Italy)
+Q4005339,Unione Sportiva Peloro,no results
+Q1521598,University-Mount Wellington,no soccer results
+Q2329137,União São João E.C.,no confident match among: São João de Ver (Portugal); União São João de Araras (Brazil)
+Q7903261,Utsiktens BK,no confident match among: Utsikten (Sweden)
+Q731715,VSE St. Pölten,no confident match among: SKN St. Polten (Austria); St. Pölten Women (Austria)
+Q1837832,VV Bedum,no confident match among: VVOG (The Netherlands); VVSB (The Netherlands); VV DUNO (The Netherlands); VVV-Venlo (The Netherlands)
+Q7909386,Valdemarsviks IF,no results
+Q3626999,Valdinievole Montecatini,no results
+Q1387817,Vale of Leven F.C.,no confident match among: Valencia (Spain); Valentine (Australia); Vålerenga (Norway); Valence FC (France)
+Q4004986,Valle d'Aosta Calcio,no confident match among: Valle de Egüés (Spain); ASVO (Benin); Torcy (France); Valletta (Malta)
+Q479306,VfB Hüls,no confident match among: Thes Sport (Belgium)
+Q896736,VfB Leipzig,no confident match among: RB Leipzig (Germany); Chemie Leipzig (Germany); RB Leipzig Women (Germany); RB Leipzig Youth (Germany)
+Q379681,VfB Mödling,no confident match among: Admira Wacker (Austria)
+Q1380971,Viareggio Calcio,no results
+Q1628616,Vigevano Calcio,no soccer results
+Q2438284,Vigor Football Club,no confident match among: Football Primetime (Sweden); Ba (Fiji); AFC (The Netherlands); Goa (India)
+Q3818766,Vinaròs CF,no results
+Q208585,Vitória F.C.,ambiguous: Vitória (Brazil); CD Vitoria (Spain)
+Q223450,Vitória S.C.,ambiguous: Vitória (Brazil); CD Vitoria (Spain)
+Q17518847,Vitória S.C. B,no confident match among: Ba (Fiji); BAK (Turkey); BBB (Denmark); Be1 (Lithuania)
+Q7960007,Waikato United,no confident match among: United City (Philippines); United Aruba (Aruba); United Nordic (Sweden); United Victory (Maldives)
+Q1190526,Washington Diplomats,no confident match among: Washington Spirit (United States); Washington Freedom (United States)
+Q2511604,Washington Whips,no soccer results
+Q5330813,Wellingborough Whitworth F.C.,no confident match among: Wellingborough Town (England)
+Q1813969,Welshpool Town F.C.,no confident match among: Township Rollers (Botswana); Tavua (Fiji); Lye Town (England); Bala Town (Wales)
+Q7983568,Werribee City football club,no confident match among: FC Mokpo (South Korea); Lae City (Papua New Guinea); Cork City (Ireland); Hull City (England)
+Q7987801,Western Eagles,no confident match among: Eagles Malé (Maldives); New Lambton (Australia); Green Eagles (Zambia); Academy Eagles (Turks and Caicos Islands)
+Q8021987,Willington A.F.C.,no results
+Q8029340,Wokingham & Emmbrook F.C.,no confident match among: Wokingham Town (England)
+Q8040085,Wynberg St Johns,no confident match among: St Johnstone (Scotland)
+Q2219963,XerxesDZB,no results
+Q123344481,Young Survivors,no confident match among: Young Boys (Switzerland); Young Lions (Singapore); Young Boys FD (Denmark); Young Boys II (Switzerland)
+Q955888,Zalla UC,no confident match among: UCC (Ireland); UCD (Ireland)
+Q544120,Zamora CF,ambiguous: Zamora (Spain); Zamora FC (Venezuela)
+Q273417,Écija Balompié,no results
+Q290505,Étoile Sportive Malley,no confident match among: Étoile Carouge (Switzerland); Etoile de Kivu (DR Congo); Etoile de lEst (Rwanda); Etoile Filante (Burkina Faso)
+Q291716,Íþróttabandalag Vestmannaeyja,no confident match among: ÍBV Vestmannaeyjar (Iceland)
+Q24909,Østerbros Boldklub,no confident match among: FB (Denmark); ØB (Denmark); BBB (Denmark); Gug (Denmark)
+Q8083570,ŽAK Subotica,no confident match among: Spartak Subotica (Serbia); Spartak Subotica Women (Serbia)

@@ -1,7 +1,5 @@
-# Generated dataset (regenerable by running the script — don't commit)
-football.db
-crests/
-players.js
+# Dataset artifacts are committed: football.db carries hand-applied
+# enrichment fixes and crests/ holds API-fetched images — not regenerable.
 
 # API credentials — never commit
 config.py
