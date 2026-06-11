@@ -28,6 +28,15 @@
   .club .nm{ font-size:12px; text-align:center; line-height:1.25; color:var(--ink); font-weight:600; }
   .club .yr{ font-size:10px; color:var(--soft); }
   .club .ap{ font-size:10px; color:var(--accent); font-weight:600; }
+  /* Stage-0 puzzle shows crests only; hint 1 reveals names/years/apps.
+     Cards without a usable crest always show the club name as fallback. */
+  .path .nm, .path .yr, .path .ap{ display:none; }
+  .path.revealed .nm, .path.revealed .yr, .path.revealed .ap,
+  .path .club.nocrest .nm{ display:block; }
+  .choices{ display:flex; gap:10px; justify-content:center; flex-wrap:wrap; margin:4px 0 10px; }
+  .choices button{ background:#fff; }
+  .choices button.good{ background:var(--good); border-color:var(--good); color:#fff; }
+  .choices button.bad{ background:var(--bad); border-color:var(--bad); color:#fff; }
   .club .loan-tag{ font-size:9px; font-weight:700; letter-spacing:.06em; color:#fff;
                    background:var(--accent); border-radius:4px; padding:1px 5px; }
   .arrow{ color:var(--accent); font-size:18px; }
@@ -60,7 +69,7 @@
 <div class="wrap">
   <div class="top"><h1>Guess the Player</h1>
     <div class="score">Score <b id="score">0</b> / <span id="total">0</span></div></div>
-  <div class="hint">Type the player's name, then pick a suggestion to answer. Crests show where available; otherwise the club name is shown. Loan spells inside a club stint are folded into it; a standalone loan shows a <b>LOAN</b> tag.</div>
+  <div class="hint">Guess the player from the crest path alone. Hints reveal in stages: <b>1)</b> club names, years &amp; appearances, <b>2)</b> nationality &amp; position, <b>3)</b> four players to choose from. A standalone loan shows a <b>LOAN</b> tag.</div>
   <div id="game" style="display:none">
     <div class="path" id="path"></div>
     <div class="ask">Who is this player?</div>
@@ -69,6 +78,7 @@
       <div class="suggest" id="suggest" style="display:none"></div>
     </div>
     <div class="hint-area" id="hint-area"></div>
+    <div class="choices" id="choices"></div>
     <div class="result" id="result"></div>
     <div class="answer" id="answer"></div>
     <div class="row">
@@ -110,7 +120,7 @@
       elSug=document.getElementById('suggest'), elRes=document.getElementById('result'),
       elAns=document.getElementById('answer'), elScore=document.getElementById('score'),
       elTotal=document.getElementById('total'), elHintArea=document.getElementById('hint-area'),
-      elHintBtn=document.getElementById('hint');
+      elHintBtn=document.getElementById('hint'), elChoices=document.getElementById('choices');
   var answer=null, locked=false, score=0, total=0, hintStep=0;
 
   function buildCard(c, idx){
@@ -119,9 +129,11 @@
     // Badge \u2014 always rendered; crest shown when available, hidden on error
     var badge=document.createElement('div'); badge.className='badge';
     if(c.crest){
-      var img=document.createElement('img'); img.src=c.crest; img.alt=c.name;
-      img.onerror=function(){ this.style.display='none'; };
+      var img=document.createElement('img'); img.src=c.crest; img.alt='';
+      img.onerror=function(){ this.style.display='none'; d.classList.add('nocrest'); };
       badge.appendChild(img);
+    } else {
+      d.classList.add('nocrest');
     }
     d.appendChild(badge);
     // Club name \u2014 ALWAYS shown as text
@@ -143,21 +155,48 @@
     elGuess.value=''; elGuess.disabled=false; elSug.style.display='none';
     elRes.textContent=''; elRes.className='result'; elAns.textContent='';
     elHintArea.textContent=''; elHintBtn.disabled=false; elHintBtn.textContent='Hint';
-    elPath.innerHTML='';
+    elChoices.innerHTML='';
+    elPath.innerHTML=''; elPath.classList.remove('revealed');
     answer.clubs.forEach(buildCard);
     elGuess.focus();
+  }
+
+  function buildChoices(){
+    var pool=[answer], seen={}; seen[answer._i]=true;
+    for(var tries=0; pool.length<4 && tries<1000; tries++){
+      var c=P[(Math.floor(Math.random()*P.length)+tries)%P.length];
+      if(!seen[c._i]){ seen[c._i]=true; pool.push(c); }
+    }
+    pool.sort(function(){ return Math.random()-0.5; });
+    elChoices.innerHTML='';
+    pool.forEach(function(p){
+      var b=document.createElement('button'); b.textContent=p.name;
+      b.onclick=function(){
+        if(locked) return;
+        b.className = (p._i===answer._i) ? 'good' : 'bad';
+        submit(p);
+      };
+      elChoices.appendChild(b);
+    });
   }
 
   function showHint(){
     if(locked) return;
     hintStep++;
     if(hintStep===1){
-      var nat=answer.nationality||'Unknown';
-      elHintArea.innerHTML='Nationality: <b>'+nat+'</b>';
+      // Stage 1: club names, years and appearances appear on the path
+      elPath.classList.add('revealed');
+      elHintArea.innerHTML='Club names, years &amp; appearances revealed';
       elHintBtn.textContent='More';
-    } else {
+    } else if(hintStep===2){
+      // Stage 2: nationality and position
       var nat=answer.nationality||'Unknown', pos=answer.position||'Unknown';
       elHintArea.innerHTML='Nationality: <b>'+nat+'</b> &nbsp;&middot;&nbsp; Position: <b>'+pos+'</b>';
+      elHintBtn.textContent='More';
+    } else {
+      // Stage 3: four players, one of them is the answer
+      elHintArea.innerHTML='Last hint — it’s one of these four:';
+      buildChoices();
       elHintBtn.disabled=true;
     }
   }
@@ -199,6 +238,7 @@
   function submit(picked){
     if(locked) return; locked=true; elSug.style.display='none'; elGuess.disabled=true;
     elHintBtn.disabled=true;
+    elPath.classList.add('revealed');
     total++; elTotal.textContent=total;
     if(picked._i===answer._i){ score++; elScore.textContent=score;
       elRes.textContent='\u2713 Correct \u2014 '+answer.name; elRes.className='result good'; }
@@ -208,6 +248,7 @@
   function reveal(){
     if(locked) return; locked=true; elSug.style.display='none'; elGuess.disabled=true;
     elHintBtn.disabled=true;
+    elPath.classList.add('revealed');
     total++; elTotal.textContent=total;
     elRes.textContent='It was '+answer.name; elRes.className='result bad';
   }
