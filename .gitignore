@@ -17,3 +17,6 @@ env/
 .DS_Store
 .idea/
 .vscode/
+
+# Local DB backups
+football_backup*.db
