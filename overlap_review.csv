@@ -1,7 +1,6 @@
 player,action,earlier_stint,later_stint,resolution
 Beñat Prados,TRIMMED,CD Baskonia 2018-2020,Athletic Bilbao B 2019-2022,CD Baskonia end shown as 2019
 Manuel Neuer,TRIMMED,FC Schalke 04 II 2004-2008,Schalke 04 2006-2011,FC Schalke 04 II end shown as 2006
-Marco Cassetti,NEEDS_REVIEW,Udinese Calcio 2012-2013,Watford F.C. 2012-2014,same start years; left as-is
 Mats Hummels,TRIMMED,FC Bayern Munich II 2005-2008,FC Bayern Munich 2007-2009,FC Bayern Munich II end shown as 2007
 Pierre-Emile Højbjerg,TRIMMED,FC Bayern Munich II 2012-2014,FC Bayern Munich 2013-2015,FC Bayern Munich II end shown as 2013
 Unai Gómez,TRIMMED,Athletic Bilbao B 2022-2024,Athletic Club 2023-?,Athletic Bilbao B end shown as 2023
@@ -37,7 +36,6 @@ George Best,NEEDS_REVIEW,San Jose Earthquakes 1979-1980,Hibernian F.C. 1979-1980
 Óscar Tabuenka,TRIMMED,Athletic Bilbao B 1989-1991,Athletic Club 1990-1997,Athletic Bilbao B end shown as 1990
 Sven Bender,NEEDS_REVIEW,Borussia Dortmund II 2009-2012,Borussia Dortmund 2009-2017,same start years; left as-is
 Gonçalo Guedes,NEEDS_REVIEW,S.L. Benfica B 2014-2016,S.L. Benfica 2014-2017,same start years; left as-is
-John Spencer,NEEDS_REVIEW,Motherwell F.C. 1998-1999,Everton F.C. 1998-1999,same start years; left as-is
 Carles Puyol,TRIMMED,FC Barcelona Atlètic 1997-2000,FC Barcelona 1999-2014,FC Barcelona Atlètic end shown as 1999
 Thiago Alcântara,TRIMMED,FC Barcelona Atlètic 2008-2011,FC Barcelona 2009-2013,FC Barcelona Atlètic end shown as 2009
 Xavi Hernández,TRIMMED,FC Barcelona Atlètic 1997-2000,FC Barcelona 1998-2015,FC Barcelona Atlètic end shown as 1998
@@ -77,14 +75,12 @@ Fabrizio Ravanelli,NEEDS_REVIEW,A.S.D. Casertana Calcio 1989-1990,U.S. Avellino 
 Hugo Guillamón,TRIMMED,Valencia CF Mestalla 2017-2020,Valencia CF 2019-2025,Valencia CF Mestalla end shown as 2019
 Éric Maxim Choupo-Moting,NEEDS_REVIEW,Hamburger SV 2007-2011,Hamburger SV II 2007-2011,same start years; left as-is
 Fernando Navarro,TRIMMED,FC Barcelona Atlètic 2000-2004,FC Barcelona 2001-2006,FC Barcelona Atlètic end shown as 2001
-Philippe Coutinho,TRIMMED,Aston Villa F.C. 2022-2025,Al-Duhail SC 2023-2024,Aston Villa F.C. end shown as 2023
 Dani Aranzubia,TRIMMED,Athletic Club 1994-1997,Athletic Bilbao B 1996-2000,Athletic Club end shown as 1996
 Shola Ameobi,NEEDS_REVIEW,Gaziantepspor 2014-2015,Gaziantep F.K. 2014-2015,same start years; left as-is
 Cristiano Zanetti,TRIMMED,Inter Milan 1990-1999,ACF Fiorentina 1993-1996,Inter Milan end shown as 1993
 Diego Capel,NEEDS_REVIEW,Sevilla Atlético 2004-2007,Sevilla FC 2004-2011,same start years; left as-is
 Florian Kringe,TRIMMED,Borussia Dortmund II 2000-2011,Borussia Dortmund 2001-2012,Borussia Dortmund II end shown as 2001
 Alfonso Pérez,TRIMMED,Real Madrid Castilla 1989-1992,Real Madrid Club de Fútbol 1990-1995,Real Madrid Castilla end shown as 1990
-Fredy Guarín,TRIMMED,Envigado Fútbol Club 2003-2007,AS Saint-Étienne 2006-2008,Envigado Fútbol Club end shown as 2006
 Miranda,TRIMMED,São Paulo FC 2006-2012,Atlético Madrid 2011-2015,São Paulo FC end shown as 2011
 Kalidou Koulibaly,TRIMMED,FC Metz II 2009-2011,FC Metz 2010-2012,FC Metz II end shown as 2010
 Kepa Arrizabalaga,TRIMMED,Athletic Club 2004-2012,CD Baskonia 2011-2013,Athletic Club end shown as 2011
@@ -126,7 +122,6 @@ Hugo Sánchez,NEEDS_REVIEW,LASK Linz 1995-1996,FC Linz 1995-1996,same start year
 Nacho,TRIMMED,Real Madrid Castilla 2009-2013,Real Madrid Club de Fútbol 2011-2024,Real Madrid Castilla end shown as 2011
 Lars Ricken,NEEDS_REVIEW,Borussia Dortmund II 1993-2002,Borussia Dortmund 1993-2007,same start years; left as-is
 Paco Alcácer,TRIMMED,Valencia CF Mestalla 2009-2012,Valencia CF 2010-2016,Valencia CF Mestalla end shown as 2010
-Martin Dúbravka,TRIMMED,Newcastle United F.C. 2018-2025,Manchester United F.C. 2022-2023,Newcastle United F.C. end shown as 2022
 Luis Milla,TRIMMED,FC Barcelona 1984-1990,FC Barcelona Atlètic 1985-1988,FC Barcelona end shown as 1985
 Iñaki Lafuente,TRIMMED,Athletic Club 1993-1995,Athletic Bilbao B 1994-1999,Athletic Club end shown as 1994
 Marc-André Kruska,NEEDS_REVIEW,Borussia Dortmund 2004-2008,Borussia Dortmund II 2004-2009,same start years; left as-is
@@ -138,16 +133,13 @@ Gerard Moreno,TRIMMED,Villarreal CF B 2011-2013,Villarreal CF 2012-2015,Villarre
 Ronald Araújo,TRIMMED,FC Barcelona Atlètic 2018-2020,FC Barcelona 2019-?,FC Barcelona Atlètic end shown as 2019
 Bruno Labbadia,TRIMMED,Hamburger SV 1987-1989,1. FC Kaiserslautern 1988-1991,Hamburger SV end shown as 1988
 Xabier Etxeita,TRIMMED,Athletic Bilbao B 2006-2009,Athletic Club 2008-2010,Athletic Bilbao B end shown as 2008
-Casemiro,TRIMMED,Real Madrid Club de Fútbol 2013-2022,FC Porto 2014-2015,Real Madrid Club de Fútbol end shown as 2014
 Nico Schlotterbeck,TRIMMED,SC Freiburg II 2018-2020,SC Freiburg 2019-2022,SC Freiburg II end shown as 2019
 Daniel Vivian,TRIMMED,CD Baskonia 2016-2018,Athletic Bilbao B 2017-2020,CD Baskonia end shown as 2017
 Christian Nerlinger,TRIMMED,FC Bayern Munich II 1990-1993,FC Bayern Munich 1992-1998,FC Bayern Munich II end shown as 1992
 Oihan Sancet,TRIMMED,Athletic Bilbao B 2018-2020,Athletic Club 2019-?,Athletic Bilbao B end shown as 2019
 Roland Wohlfarth,NEEDS_REVIEW,1. FC Lokomotive Leipzig 1997-1998,VfB Leipzig 1997-1998,same start years; left as-is
 Sergi Roberto,TRIMMED,FC Barcelona Atlètic 2009-2013,FC Barcelona 2010-2024,FC Barcelona Atlètic end shown as 2010
-Lee Sharpe,TRIMMED,Bradford City A.F.C. 1999-2002,Portsmouth F.C. 2001-2001,Bradford City A.F.C. end shown as 2001
 Javier López Vallejo,TRIMMED,Osasuna B 1992-1995,Club Atlético Osasuna 1994-1999,Osasuna B end shown as 1994
-Emanuele Calaiò,NEEDS_REVIEW,Genoa CFC 2013-2014,SSC Napoli 2013-2014,same start years; left as-is
 Nuri Şahin,NEEDS_REVIEW,Borussia Dortmund II 2005-2008,Borussia Dortmund 2005-2011,same start years; left as-is
 Miroslav Klose,NEEDS_REVIEW,1. FC Kaiserslautern II 1999-2001,1. FC Kaiserslautern 1999-2004,same start years; left as-is
 Mesut Özil,TRIMMED,SV Werder Bremen 2008-2010,Real Madrid Club de Fútbol 2009-2013,SV Werder Bremen end shown as 2009

@@ -27,6 +27,7 @@
   .club .badge img.hidden{ display:none; }
   .club .nm{ font-size:12px; text-align:center; line-height:1.25; color:var(--ink); font-weight:600; }
   .club .yr{ font-size:10px; color:var(--soft); }
+  .club .ap{ font-size:10px; color:var(--accent); font-weight:600; }
   .club .loan-tag{ font-size:9px; font-weight:700; letter-spacing:.06em; color:#fff;
                    background:var(--accent); border-radius:4px; padding:1px 5px; }
   .arrow{ color:var(--accent); font-size:18px; }
@@ -128,6 +129,9 @@
     // Years \u2014 ALWAYS shown
     var yr=document.createElement('div'); yr.className='yr';
     yr.textContent=(c.start||'?')+(c.end?('\u2013'+c.end):''); d.appendChild(yr);
+    // Appearances during the stint, when known
+    if(c.apps!=null){ var ap=document.createElement('div'); ap.className='ap';
+      ap.textContent=c.apps+(c.apps===1?' app':' apps'); d.appendChild(ap); }
     // Loan spells carry an L tag so they read differently from transfers
     if(c.loan){ var lt=document.createElement('div'); lt.className='loan-tag'; lt.textContent='LOAN'; d.appendChild(lt); }
     elPath.appendChild(d);

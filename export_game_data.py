@@ -78,7 +78,10 @@ def display_sequence(player, stints):
     sts = sorted((dict(s) for s in stints),
                  key=lambda s: (s["start"], end_of(s)))
 
-    # 1) loan classification (flag OR nested-short-stint heuristic)
+    # 1) loan classification. Wikidata flag is trusted as-is; the heuristic
+    #    (short stint inside a longer spell) needs STRICT containment so a
+    #    permanent half-season move followed by a same-year transfer (e.g.
+    #    Blind's Bayern '23 before Girona '23-) is never mistaken for a loan.
     for s in sts:
         s["_loan"] = bool(s["loan"])
     for s in sts:
@@ -86,28 +89,38 @@ def display_sequence(player, stints):
             continue
         if s["end"] - s["start"] <= 1 and any(
                 o is not s and not o["loan"] and o["name"] != s["name"]
-                and o["start"] <= s["start"] and end_of(o) >= s["end"]
-                and end_of(o, s["end"]) - o["start"] > s["end"] - s["start"]
+                and (o["start"] < s["start"]
+                     or (o["start"] == s["start"] and o["end"] is not None
+                         and o["end"] > s["end"]))
+                and end_of(o) >= s["end"]
+                # starting in the parent's final year = sequential move
+                # (left club A, joined B same calendar year), not nested
+                and s["start"] != end_of(o)
                 for o in sts):
             s["_loan"] = True
 
-    # 2) hide loans nested inside a different club's (non-loan) spell
+    # 2) hide only SHORT (<=1yr) loans nested inside a different club's
+    #    spell; longer loans (Christensen's 2yr Gladbach, Courtois's
+    #    Atletico years) stay visible and carry the LOAN tag.
     visible = []
     for s in sts:
+        dur = end_of(s, s["start"]) - s["start"]
         nested_in = [o for o in sts
                      if o is not s and not o["_loan"] and o["name"] != s["name"]
                      and o["start"] <= s["start"]
-                     and end_of(o) >= end_of(s, s["start"])]
-        if s["_loan"] and nested_in:
+                     and end_of(o) >= end_of(s, s["start"])
+                     and s["start"] != end_of(o)]
+        if s["_loan"] and dur <= 1 and nested_in:
             continue
         visible.append(s)
 
-    # 3) Fix 6 — strict overlaps between different visible clubs
+    # 3) Fix 6 — strict overlaps between different visible PERMANENT clubs
+    #    (visible loans legitimately overlap their parent spell — skip them)
     for i, a in enumerate(visible):
-        if a["end"] is None:
+        if a["end"] is None or a["_loan"]:
             continue
         for b in visible[i + 1:]:
-            if b["name"] == a["name"] or b["start"] >= a["end"]:
+            if b["name"] == a["name"] or b["start"] >= a["end"] or b["_loan"]:
                 continue
             if b["start"] > a["start"]:
                 overlap_review.append([player, "TRIMMED",
