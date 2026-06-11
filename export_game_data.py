@@ -57,41 +57,73 @@ def card(st, start=None, end=None, loan=False):
     return c
 
 
-def display_sequence(stints):
-    """Chronological cards; a parent spell is split around loans nested
-    inside it (parent -> loan(s) -> parent again), with the return card
-    shown only when the parent continues past the loan with games played."""
-    out = []
-    used = set()
-    for i, st in enumerate(stints):
-        if i in used:
+overlap_review = []  # rows for overlap_review.csv
+
+
+def display_sequence(player, stints):
+    """Resolve overlapping/nested stints with loan-first precedence:
+
+    1. Classify loans: Wikidata is_loan flag, or heuristic (<=1yr stint
+       fully inside a different club's longer spell).
+    2. Hide each loan nested inside a different club's spell — the parent
+       shows its full range and keeps its own apps. Resolved per loan, so
+       multi-loan careers work. Non-nested loans stay visible (LOAN tag).
+    3. Remaining different-club strict overlaps (Fix 6): trim the earlier
+       club's end to the later club's start; anything untrimmable is
+       logged to overlap_review.csv.
+    """
+    def end_of(s, open_=9999):
+        return s["end"] if s["end"] is not None else open_
+
+    sts = sorted((dict(s) for s in stints),
+                 key=lambda s: (s["start"], end_of(s)))
+
+    # 1) loan classification (flag OR nested-short-stint heuristic)
+    for s in sts:
+        s["_loan"] = bool(s["loan"])
+    for s in sts:
+        if s["_loan"] or s["end"] is None:
             continue
-        if st["loan"]:
-            out.append(card(st, loan=True))
+        if s["end"] - s["start"] <= 1 and any(
+                o is not s and not o["loan"] and o["name"] != s["name"]
+                and o["start"] <= s["start"] and end_of(o) >= s["end"]
+                and end_of(o, s["end"]) - o["start"] > s["end"] - s["start"]
+                for o in sts):
+            s["_loan"] = True
+
+    # 2) hide loans nested inside a different club's (non-loan) spell
+    visible = []
+    for s in sts:
+        nested_in = [o for o in sts
+                     if o is not s and not o["_loan"] and o["name"] != s["name"]
+                     and o["start"] <= s["start"]
+                     and end_of(o) >= end_of(s, s["start"])]
+        if s["_loan"] and nested_in:
             continue
-        p_end = st["end"] if st["end"] is not None else 9999
-        nested = []
-        for j in range(i + 1, len(stints)):
-            L = stints[j]
-            l_end = L["end"] if L["end"] is not None else L["start"]
-            if (j not in used and L["loan"] and L["name"] != st["name"]
-                    and L["start"] >= st["start"] and l_end <= p_end):
-                nested.append((j, L))
-        if not nested:
-            out.append(card(st))
+        visible.append(s)
+
+    # 3) Fix 6 — strict overlaps between different visible clubs
+    for i, a in enumerate(visible):
+        if a["end"] is None:
             continue
-        first = nested[0][1]
-        out.append(card(st, end=first["start"]))
-        for j, L in nested:
-            used.add(j)
-            out.append(card(L, loan=True))
-        last = nested[-1][1]
-        last_end = last["end"] if last["end"] is not None else last["start"]
-        if last_end < p_end and (st["apps"] is None or st["apps"] > 0):
-            ret = card(st, start=last_end)
-            ret["apps"] = None
-            out.append(ret)
-    return out
+        for b in visible[i + 1:]:
+            if b["name"] == a["name"] or b["start"] >= a["end"]:
+                continue
+            if b["start"] > a["start"]:
+                overlap_review.append([player, "TRIMMED",
+                    f"{a['name']} {a['start']}-{a['end']}",
+                    f"{b['name']} {b['start']}-{b['end'] or '?'}",
+                    f"{a['name']} end shown as {b['start']}"])
+                a["end"] = b["start"]
+            else:
+                overlap_review.append([player, "NEEDS_REVIEW",
+                    f"{a['name']} {a['start']}-{a['end']}",
+                    f"{b['name']} {b['start']}-{b['end'] or '?'}",
+                    "same start years; left as-is"])
+            break
+
+    return [card(s, start=s["start"], end=s["end"], loan=s["_loan"])
+            for s in visible]
 
 
 for qid, pl in raw.items():
@@ -100,8 +132,15 @@ for qid, pl in raw.items():
         "nationality": pl["nationality"],
         "position": pl["position"],
         "aliases": [],
-        "clubs": display_sequence(pl["stints"]),
+        "clubs": display_sequence(pl["name"], pl["stints"]),
     }
+
+import csv
+with open("overlap_review.csv", "w", newline="", encoding="utf-8") as f:
+    w = csv.writer(f)
+    w.writerow(["player", "action", "earlier_stint", "later_stint", "resolution"])
+    w.writerows(overlap_review)
+print(f"{len(overlap_review)} overlaps handled -> overlap_review.csv")
 
 # Aliases (for the fuzzy answer matcher).
 for r in conn.execute("SELECT player_qid, alias FROM player_aliases"):
